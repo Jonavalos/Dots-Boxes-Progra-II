@@ -42,8 +42,29 @@ void tabla_3x3::setLinea(int fila, int col) {
 
 string tabla_3x3::toString() {
 	stringstream s;
+	int cont = 0;
+
+	//para los índices de la parte de arriba
+	s << setw(7) << "0";
+	for (int i = 0; i < 6; i++) {
+		s << setw(3) << i + 1;
+	}
+	s << endl << endl;
+
+	s << setw(7) << "0";
+	for (int i = 0; i < 3; i++) {
+		s << setw(6) << i + 1;
+	}
+	s << endl;
 
 	for (int i = 0; i < _filas; i++) {
+		s << i << "  ";
+		if (i % 2 == 0) {
+			s << cont << "  "; cont++;
+		}
+		else {
+			s << "   ";
+		}
 		for (int j = 0; j < _columnas; j++) {
 			s << _tabla[i][j] << "  ";
 		}

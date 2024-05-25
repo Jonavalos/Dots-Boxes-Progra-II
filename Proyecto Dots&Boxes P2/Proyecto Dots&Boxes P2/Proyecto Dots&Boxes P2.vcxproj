@@ -130,11 +130,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tabla.cpp" />
     <ClCompile Include="tabla_3x3.cpp" />
+    <ClCompile Include="tabla_3x4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bibliotecas.h" />
     <ClInclude Include="tabla.h" />
     <ClInclude Include="tabla_3x3.h" />
+    <ClInclude Include="tabla_3x4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
