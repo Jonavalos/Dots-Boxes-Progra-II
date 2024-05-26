@@ -6,7 +6,7 @@ tabla_3x3::tabla_3x3() {
 
 	_tabla = new char* [_filas];
 	for (int i = 0; i < _filas; i++) {
-		_tabla[i] = new char[7];
+		_tabla[i] = new char[_filas];
 		for (int j = 0; j < _columnas; j++) {
 			_tabla[i][j] = char('+');
 		}
@@ -45,20 +45,13 @@ string tabla_3x3::toString() {
 	int cont = 0;
 
 	//para los índices de la parte de arriba
-	s << setw(7) << "0";
-	for (int i = 0; i < 6; i++) {
-		s << setw(3) << i + 1;
-	}
-	s << endl << endl;
-
-	s << setw(7) << "0";
+	s << setw(4) << "0";
 	for (int i = 0; i < 3; i++) {
 		s << setw(6) << i + 1;
 	}
-	s << endl;
+	s << endl << endl;
 
 	for (int i = 0; i < _filas; i++) {
-		s << i << "  ";
 		if (i % 2 == 0) {
 			s << cont << "  "; cont++;
 		}
