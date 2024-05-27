@@ -1,10 +1,11 @@
 #pragma once
 #include "bibliotecas.h"
 #include "baseObj.h"
-class tabla: public baseObj { //interfaz del tablero
+#include "validar.h"
+class tabla:public baseObj { //interfaz del tablero
 public:
-	tabla();
-	virtual ~tabla();
+	tabla(){}
+	virtual ~tabla(){}
 
 	virtual void setLinea(int, int) = 0;
 	virtual string toString() const = 0;
@@ -13,8 +14,10 @@ public:
 		COUT << tabla.toString() << endl;
 		return COUT;
 	}
-
+	virtual void actualizarTabBinaria() = 0;
 	virtual string toStringBin() { return ""; }
 	virtual string toStringSimple() { return ""; }
-	virtual void actualizarTabBinaria(){}
+	virtual char getValor(int f, int c) = 0;
+private:
+
 };

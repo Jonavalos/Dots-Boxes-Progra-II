@@ -134,6 +134,7 @@
     <ClCompile Include="tabla_3x3.cpp" />
     <ClCompile Include="tabla_3x4.cpp" />
     <ClCompile Include="tabla_3x5.cpp" />
+    <ClCompile Include="validar.cpp" />
     <ClCompile Include="vecTablas.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="tabla_3x3.h" />
     <ClInclude Include="tabla_3x4.h" />
     <ClInclude Include="tabla_3x5.h" />
+    <ClInclude Include="validar.h" />
     <ClInclude Include="vecTablas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

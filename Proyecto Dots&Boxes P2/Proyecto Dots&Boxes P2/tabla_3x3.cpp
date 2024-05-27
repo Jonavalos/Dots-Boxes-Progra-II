@@ -38,15 +38,16 @@ tabla_3x3::~tabla_3x3() {
 }
 
 void tabla_3x3::setLinea(int fila, int col) {
-	if (fila % 2 == 0 && col % 2 != 0) {
-		_tabla[fila][col] = char('-');
+
+	if (!validar::isFueraLimites(this, fila, col) && validar::isLibre(this, fila, col)) {
+		if (fila % 2 == 0 && col % 2 != 0) {
+			_tabla[fila][col] = char('-');
+		}
+		if (fila % 2 != 0 && col % 2 == 0) {
+			_tabla[fila][col] = char('|');
+		}
 	}
-	if (fila % 2 != 0 && col % 2 == 0) {
-		_tabla[fila][col] = char('|');
-	}
-	else {
-		cout << " " << endl;
-	}
+
 }
 
 string tabla_3x3::toString() const {
@@ -113,6 +114,17 @@ string tabla_3x3::toStringSimple()
 		s << '\n';
 	}
 	return s.str();
+}
+
+char tabla_3x3::getValor(int f, int c)
+{
+	if (!validar::isFueraLimites(this, f, c)) {
+		return _tabla[f][c];
+	}
+	else {
+		throw new exception;
+	}
+	
 }
 
 

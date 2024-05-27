@@ -67,3 +67,13 @@ string tabla_3x4::toString() const {
 	return s.str();
 }
 
+char tabla_3x4::getValor(int f, int c)
+{
+	if (f < 3 && c < 3 && f >= 0 && c >= 0) {
+		return _tabla[f][c];
+	}
+	else {
+		return '?';
+	}
+}
+

@@ -12,6 +12,8 @@ public:
 	virtual void actualizarTabBinaria();
 	virtual string toStringBin();
 	virtual string toStringSimple();
+	virtual char getValor(int f, int c);
+
 private:
 	char** _tabla;
 	bool** _tablaBin;
@@ -19,3 +21,4 @@ private:
 	int _columnas;
 
 };
+

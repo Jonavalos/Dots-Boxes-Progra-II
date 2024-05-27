@@ -12,6 +12,7 @@ public:
 	virtual string toStringBin() { return ""; }
 	virtual string toStringSimple() { return ""; }
 	virtual void actualizarTabBinaria() {}
+	virtual char getValor(int f, int c);
 private:
 	char** _tabla;
 	int _filas;
