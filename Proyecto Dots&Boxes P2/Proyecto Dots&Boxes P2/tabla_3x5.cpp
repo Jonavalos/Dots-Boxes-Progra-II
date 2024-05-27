@@ -29,14 +29,13 @@ tabla_3x5::~tabla_3x5() {
 }
 
 void tabla_3x5::setLinea(int fila, int col) {
-	if (fila % 2 == 0 && col % 2 != 0) {
-		_tabla[fila][col] = char('-');
-	}
-	if (fila % 2 != 0 && col % 2 == 0) {
-		_tabla[fila][col] = char('|');
-	}
-	else {
-		cout << " " << endl;
+	if (!validar::isFueraLimites(this, fila, col) && validar::isLibre(this, fila, col)) {
+		if (fila % 2 == 0 && col % 2 != 0) {
+			_tabla[fila][col] = char('-');
+		}
+		if (fila % 2 != 0 && col % 2 == 0) {
+			_tabla[fila][col] = char('|');
+		}
 	}
 }
 
@@ -69,11 +68,11 @@ string tabla_3x5::toString() const {
 
 char tabla_3x5::getValor(int f, int c)
 {
-	if (f < 3 && c < 3 && f >= 0 && c >= 0) {
+	if (!validar::isFueraLimites(this, f, c)) {
 		return _tabla[f][c];
 	}
 	else {
-		return '?';
+		throw new exception;
 	}
 }
 

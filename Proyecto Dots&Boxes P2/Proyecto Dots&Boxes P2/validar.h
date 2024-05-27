@@ -14,7 +14,5 @@ public:
 
 	static bool isFueraLimites(tabla* mat, int fil, int col);
 
-
-
 };
 

@@ -19,7 +19,7 @@ int main() {
 	tabla3x3->setLinea(0, 0);	//incorrecto
 	tabla3x3->setLinea(2, 4);	//incorrecto
 	cout << *tabla3x3 << endl;
-	/*
+	
 	tabla* tabla3x4 = new tabla_3x4();
 	cout << endl << endl;
 
@@ -59,7 +59,7 @@ int main() {
 	cout << *veta << endl;
 	cout << endl;
 	
-	*/
+	
 	
 	cout <<"aaaa"<< endl;
 	cout << tabla3x3->toStringSimple() << endl;
