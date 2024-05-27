@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="baseObj.cpp" />
+    <ClCompile Include="iteradorVecTablas.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tabla.cpp" />
     <ClCompile Include="tabla_3x3.cpp" />
@@ -135,7 +137,9 @@
     <ClCompile Include="vecTablas.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="baseObj.h" />
     <ClInclude Include="bibliotecas.h" />
+    <ClInclude Include="iteradorVecTablas.h" />
     <ClInclude Include="tabla.h" />
     <ClInclude Include="tabla_3x3.h" />
     <ClInclude Include="tabla_3x4.h" />

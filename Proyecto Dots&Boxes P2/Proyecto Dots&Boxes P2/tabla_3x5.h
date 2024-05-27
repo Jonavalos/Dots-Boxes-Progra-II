@@ -7,9 +7,11 @@ public:
 	virtual ~tabla_3x5();
 
 	virtual void setLinea(int, int);
-	virtual string toString();
+	virtual string toString() const;
 
-	virtual friend ostream& operator<<(ostream& COUT, tabla& tabla);
+	virtual string toStringBin() { return ""; }
+	virtual string toStringSimple() { return ""; }
+	virtual void actualizarTabBinaria() {}
 
 private:
 	char** _tabla;

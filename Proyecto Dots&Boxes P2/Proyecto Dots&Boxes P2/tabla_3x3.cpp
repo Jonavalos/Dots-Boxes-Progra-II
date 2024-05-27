@@ -18,6 +18,16 @@ tabla_3x3::tabla_3x3() {
 			if (i % 2 != 0) { _tabla[i][j] = char(' '); }
 		}
 	}
+
+	//
+	_tablaBin = new bool* [_filas];
+	for (int i = 0; i < _filas; i++) {
+		_tablaBin[i] = new bool[_filas];
+		for (int j = 0; j < _columnas; j++) {
+			_tablaBin[i][j] = 0;
+		}
+	}
+	actualizarTabBinaria();
 }
 
 tabla_3x3::~tabla_3x3() {
@@ -40,7 +50,7 @@ void tabla_3x3::setLinea(int fila, int col) {
 	}
 }
 
-string tabla_3x3::toString() {
+string tabla_3x3::toString() const {
 	stringstream s;
 	int cont = 0;
 
@@ -67,8 +77,43 @@ string tabla_3x3::toString() {
 	return s.str();
 }
 
-ostream& operator<<(ostream& COUT, tabla& tabla)
+void tabla_3x3::actualizarTabBinaria()
 {
-	COUT << tabla.toString() << endl;
-	return COUT;
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 0; j < _columnas; j++) {
+			if (_tabla[i][j] == ' ') {
+				_tablaBin[i][j] = 1;
+			}
+			if (_tabla[i][j] == '-' || _tabla[i][j] == '|' || _tabla[i][j] == '+') {
+				_tablaBin[i][j] = 0;
+			}
+		}
+	}
+
 }
+
+string tabla_3x3::toStringBin()
+{
+	stringstream s;
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 0; j < _columnas; j++) {
+			s <<_tablaBin[i][j]<<"   ";
+		}
+		s << '\n';
+	}
+	return s.str();
+}
+
+string tabla_3x3::toStringSimple()
+{
+	stringstream s;
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 0; j < _columnas; j++) {
+			s << _tabla[i][j] << "   ";
+		}
+		s << '\n';
+	}
+	return s.str();
+}
+
+

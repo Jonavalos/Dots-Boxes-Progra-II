@@ -40,7 +40,7 @@ void tabla_3x5::setLinea(int fila, int col) {
 	}
 }
 
-string tabla_3x5::toString() {
+string tabla_3x5::toString() const {
 	stringstream s;
 	int cont = 0;
 
@@ -67,8 +67,3 @@ string tabla_3x5::toString() {
 	return s.str();
 }
 
-ostream& operator<<(ostream& COUT, tabla& tabla)
-{
-	COUT << tabla.toString() << endl;
-	return COUT;
-}
