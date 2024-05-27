@@ -27,7 +27,6 @@ tabla_3x3::tabla_3x3() {
 			_tablaBin[i][j] = 0;
 		}
 	}
-	actualizarTabBinaria();
 }
 
 tabla_3x3::~tabla_3x3() {
@@ -81,10 +80,10 @@ void tabla_3x3::actualizarTabBinaria()
 {
 	for (int i = 0; i < _filas; i++) {
 		for (int j = 0; j < _columnas; j++) {
-			if (_tabla[i][j] == ' ') {
+			if (_tabla[i][j] == 32) {
 				_tablaBin[i][j] = 1;
 			}
-			if (_tabla[i][j] == '-' || _tabla[i][j] == '|' || _tabla[i][j] == '+') {
+			else {
 				_tablaBin[i][j] = 0;
 			}
 		}

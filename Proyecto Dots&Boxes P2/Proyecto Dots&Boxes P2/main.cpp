@@ -57,7 +57,7 @@ int main() {
 	//veta->agregar(tabla3x5);
 	//cout << *veta << endl;
 	//cout << endl;
-	cout <<"fddasfdas"<< endl;
+	cout <<"eeeeee"<< endl;
 	cout << tabla3x3->toStringSimple() << endl;
 	tabla3x3->actualizarTabBinaria();
 	cout << tabla3x3->toStringBin() << endl;
