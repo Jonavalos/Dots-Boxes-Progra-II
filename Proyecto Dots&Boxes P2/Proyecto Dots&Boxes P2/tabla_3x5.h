@@ -9,6 +9,8 @@ public:
 	virtual void setLinea(int, int);
 	virtual string toString();
 
+	virtual friend ostream& operator<<(ostream& COUT, tabla& tabla);
+
 private:
 	char** _tabla;
 	int _filas;

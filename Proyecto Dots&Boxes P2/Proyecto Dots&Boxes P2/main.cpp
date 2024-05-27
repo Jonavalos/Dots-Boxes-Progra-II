@@ -47,3 +47,16 @@ int main() {
 
 	return 0;
 }
+
+/*
+
+TO DO:
+
+-METER TODO EN OBJETOBASE
+-ITERADOR PARA vecTablas
+
+
+
+
+
+*/

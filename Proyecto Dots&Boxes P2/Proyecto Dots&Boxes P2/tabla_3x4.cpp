@@ -66,3 +66,9 @@ string tabla_3x4::toString() {
 
 	return s.str();
 }
+
+ostream& operator<<(ostream& COUT, tabla& tabla)
+{
+	COUT << tabla.toString() << endl;
+	return COUT;
+}
