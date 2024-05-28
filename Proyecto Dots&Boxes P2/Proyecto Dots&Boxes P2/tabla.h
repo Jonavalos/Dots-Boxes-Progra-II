@@ -9,6 +9,7 @@ public:
 
 	virtual void setLinea(int, int) = 0;
 	virtual bool lleno() = 0;
+	virtual void setCajaCompletada(int fila, int col, char jug) = 0;
 	virtual string toString() const = 0;
 
 	friend ostream& operator<<(ostream& COUT, tabla& tabla){

@@ -8,6 +8,7 @@ public:
 
 	virtual void setLinea(int, int);
 	virtual bool lleno();
+	virtual void setCajaCompletada(int fila, int col, char jug);
 	virtual string toString() const;
 
 	virtual void actualizarTabBinaria();

@@ -51,6 +51,12 @@ bool tabla_3x5::lleno() {
 	return true;
 }
 
+void tabla_3x5::setCajaCompletada(int fila, int col, char jug) {
+	if (validar::isLibre(this, fila, col)) {
+		_tabla[fila][col] = jug;
+	}
+}
+
 string tabla_3x5::toString() const {
 	stringstream s;
 	int cont = 0;
