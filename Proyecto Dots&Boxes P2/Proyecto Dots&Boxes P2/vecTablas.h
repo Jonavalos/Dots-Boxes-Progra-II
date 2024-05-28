@@ -13,6 +13,7 @@ public:
 	vecTablas();
 	virtual ~vecTablas();
 	void agregar(tabla* tab);
+	tabla* getTabla(int pos);
 
 	string toString() const;
 	iteradorVecTablas* getIterador() const;

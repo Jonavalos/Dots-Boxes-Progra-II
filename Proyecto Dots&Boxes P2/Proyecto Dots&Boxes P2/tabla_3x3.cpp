@@ -50,6 +50,18 @@ void tabla_3x3::setLinea(int fila, int col) {
 
 }
 
+bool tabla_3x3::lleno() {
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 0; j < _columnas; j++) {
+			if (_tabla[i][j] == 32) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
 string tabla_3x3::toString() const {
 	stringstream s;
 	int cont = 0;

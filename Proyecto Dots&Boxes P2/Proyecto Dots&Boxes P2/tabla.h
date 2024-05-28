@@ -8,6 +8,7 @@ public:
 	virtual ~tabla(){}
 
 	virtual void setLinea(int, int) = 0;
+	virtual bool lleno() = 0;
 	virtual string toString() const = 0;
 
 	friend ostream& operator<<(ostream& COUT, tabla& tabla){

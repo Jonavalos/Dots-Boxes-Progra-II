@@ -7,6 +7,7 @@ public:
 	virtual ~tabla_3x3();
 
 	virtual void setLinea(int, int);
+	virtual bool lleno();
 	virtual string toString() const;
 
 	virtual void actualizarTabBinaria();

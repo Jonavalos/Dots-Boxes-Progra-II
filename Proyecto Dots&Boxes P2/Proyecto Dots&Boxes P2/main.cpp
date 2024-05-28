@@ -3,6 +3,7 @@
 #include "tabla_3x4.h"
 #include "tabla_3x5.h"
 #include "vecTablas.h"
+#include "controladora.h"
 using namespace std;
 
 int main() {
@@ -65,6 +66,11 @@ int main() {
 	cout << tabla3x3->toStringSimple() << endl;
 	tabla3x3->actualizarTabBinaria();
 	cout << tabla3x3->toStringBin() << endl;
+
+	cout << "aljkbfssdfdkjbnsd" << endl;
+
+	controladora co(veta);
+	co.control0();
 	
 	return 0;
 }

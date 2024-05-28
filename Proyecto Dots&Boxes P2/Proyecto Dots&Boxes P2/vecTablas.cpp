@@ -19,6 +19,16 @@ void vecTablas::agregar(tabla* tab)
 	vec[can++] = tab;
 }
 
+tabla* vecTablas::getTabla(int pos) {
+	for (int i = 0; i < can; i++) {
+		if (pos == i) {
+			return vec[i];
+		}
+	}
+
+	return nullptr;
+}
+
 string vecTablas::toString() const
 {
 	stringstream s;

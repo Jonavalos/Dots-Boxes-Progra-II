@@ -7,6 +7,7 @@ public:
 	virtual ~tabla_3x5();
 
 	virtual void setLinea(int, int);
+	virtual bool lleno();
 	virtual string toString() const;
 
 	virtual string toStringBin() { return ""; }

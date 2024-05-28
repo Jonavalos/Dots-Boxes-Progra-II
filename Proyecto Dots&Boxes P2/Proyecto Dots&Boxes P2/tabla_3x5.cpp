@@ -39,6 +39,18 @@ void tabla_3x5::setLinea(int fila, int col) {
 	}
 }
 
+bool tabla_3x5::lleno() {
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 0; j < _columnas; j++) {
+			if (_tabla[i][j] != char(' ')) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
 string tabla_3x5::toString() const {
 	stringstream s;
 	int cont = 0;
