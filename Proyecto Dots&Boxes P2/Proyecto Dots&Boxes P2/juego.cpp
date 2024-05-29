@@ -28,7 +28,7 @@ void juego::mostrarVecTablas(vecTablas* vec) {
 			cout << "Columna: "; cin >> y;
 		} while (!validar::isLibre(tabla1, x, y));
 		tabla1->setLinea(x, y);
-
+		//validar::completarLetras(tabla1, jugador1) AQUI VA CUANDO SE PUEDA
 		if (tabla1->lleno()) break;
 
 		// Jugador B
@@ -39,6 +39,7 @@ void juego::mostrarVecTablas(vecTablas* vec) {
 			cout << "Columna: "; cin >> y;
 		} while (!validar::isLibre(tabla1, x, y));
 		tabla1->setLinea(x, y);
+		//validar::completarLetras(tabla1, jugador2) AQUI VA CUANDO SE PUEDA
 	}
 
 	cout << *tabla1;

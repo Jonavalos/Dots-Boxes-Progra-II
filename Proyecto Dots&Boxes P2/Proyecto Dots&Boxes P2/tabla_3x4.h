@@ -16,6 +16,7 @@ public:
 	virtual string toStringSimple() { return ""; }
 	virtual void actualizarTabBinaria() {}
 	virtual char getValor(int f, int c);
+	virtual bool setLetra(int fil, int col, char letra);
 private:
 	char** _tabla;
 	int _filas;

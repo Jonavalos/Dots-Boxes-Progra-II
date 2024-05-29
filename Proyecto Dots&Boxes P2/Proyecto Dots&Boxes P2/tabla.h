@@ -23,6 +23,9 @@ public:
 	virtual string toStringBin() { return ""; }
 	virtual string toStringSimple() { return ""; }
 	virtual char getValor(int f, int c) = 0;
+
+	virtual bool setLetra(int fil, int col, char letra) = 0;
+
 private:
 
 };

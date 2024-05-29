@@ -39,8 +39,8 @@ int main() {
 	tabla3x3->actualizarTabBinaria();
 	cout << tabla3x3->toStringBin() << endl;*/
 
-	/*jugador* jug1 = new jugador('B');
-	jugador* jug2 = new jugador('A');*/
+	jugador* jug1 = new jugador('A');
+	jugador* jug2 = new jugador('B');
 	//tabla3x3->isCajaCompletada(*jug1);
 
 	tabla3x3->setLinea(0, 3);	//correcto
@@ -56,7 +56,7 @@ int main() {
 	//tabla3x3->isCajaCompletada(*jug2);
 	cout << *tabla3x3 << endl;
 
-	tabla3x3->setCajaCompletada(1, 1, 'A');
+	/*tabla3x3->setCajaCompletada(1, 1, 'A');
 	cout << *tabla3x3 << endl;
 	tabla3x3->setCajaCompletada(1, 3, 'A');
 	cout << *tabla3x3 << endl;
@@ -73,9 +73,28 @@ int main() {
 	tabla3x3->setCajaCompletada(5, 3, 'A');
 	cout << *tabla3x3 << endl;
 	tabla3x3->setCajaCompletada(5, 5, 'A');
+	cout << *tabla3x3 << endl;*/
+
+	
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
 	cout << *tabla3x3 << endl;
-
-
+	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
+	cout << *tabla3x3 << endl;
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
+	cout << *tabla3x3 << endl;
+	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
+	cout << *tabla3x3 << endl;	
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
+	cout << *tabla3x3 << endl;
+	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
+	cout << *tabla3x3 << endl;
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
+	cout << *tabla3x3 << endl;
+	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
+	cout << *tabla3x3 << endl;
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
+	cout << *tabla3x3 << endl;
+	
 	/*controladora co(veta);
 	co.control0();*/
 	
@@ -114,11 +133,10 @@ int main() {
 
 TO DO:
 
+-jugadores en 'juego'
 
 -iterador para matrices
 -matrices binarias en 3x4 y 3x5
 -uso de matrices binarias para procesos logicos
--usar validar en 3x4 y 3x5
-
 
 */

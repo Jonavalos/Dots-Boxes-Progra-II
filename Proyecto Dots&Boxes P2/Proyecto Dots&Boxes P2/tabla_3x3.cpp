@@ -68,17 +68,6 @@ void tabla_3x3::setCajaCompletada(int fila, int col, char jug) {
 	}
 }
 
-//bool tabla_3x3::isRodeada(int i, int j) {
-//	if (!validar::isFueraLimites(this, i - 1, j) && !validar::isLibre(this, i - 1, j) && //arriba
-//		!validar::isFueraLimites(this, i, j - 1) && !validar::isLibre(this, i, j - 1) && //izq
-//		!validar::isFueraLimites(this, i, j + 1) && !validar::isLibre(this, i, j + 1) && //der
-//		!validar::isFueraLimites(this, i + 1, j) && !validar::isLibre(this, i + 1, j) //arriba
-//		) {
-//		return true;
-//	}
-//	return false;
-//}
-
 string tabla_3x3::toString() const {
 	stringstream s;
 	int cont = 0;
@@ -154,6 +143,15 @@ char tabla_3x3::getValor(int f, int c)
 		throw new exception;
 	}
 	
+}
+
+bool tabla_3x3::setLetra(int fil, int col, char letra)
+{
+	if (validar::isLibre(this, fil, col) && !validar::isFueraLimites(this, fil, col)) {
+		_tabla[fil][col] = letra;
+		return true;
+	}
+	return false;
 }
 
 

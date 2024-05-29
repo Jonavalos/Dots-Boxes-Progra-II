@@ -9,14 +9,14 @@ public:
 	virtual void setLinea(int, int);
 	virtual bool lleno();
 	virtual void setCajaCompletada(int fila, int col, char jug);
-	//virtual bool isRodeada(int i, int j);
+	
 	virtual string toString() const;
 
 	virtual void actualizarTabBinaria();
 	virtual string toStringBin();
 	virtual string toStringSimple();
 	virtual char getValor(int f, int c);
-
+	virtual bool setLetra(int fil, int col, char letra);
 private:
 	char** _tabla;
 	bool** _tablaBin;

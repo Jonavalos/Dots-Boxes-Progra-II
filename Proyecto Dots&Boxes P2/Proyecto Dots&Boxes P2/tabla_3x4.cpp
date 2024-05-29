@@ -98,3 +98,12 @@ char tabla_3x4::getValor(int f, int c)
 	}
 }
 
+bool tabla_3x4::setLetra(int fil, int col, char letra)
+{
+	if (validar::isLibre(this, fil, col) && !validar::isFueraLimites(this, fil, col)) {
+		_tabla[fil][col] = letra;
+		return true;
+	}
+	return false;
+}
+
