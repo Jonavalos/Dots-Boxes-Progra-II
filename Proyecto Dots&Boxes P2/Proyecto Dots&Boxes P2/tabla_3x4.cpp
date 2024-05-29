@@ -57,6 +57,10 @@ void tabla_3x4::setCajaCompletada(int fila, int col, char jug) {
 	}
 }
 
+//void tabla_3x4::isCajaCompletada(jugador& jug)
+//{
+//}
+
 string tabla_3x4::toString() const {
 	stringstream s;
 	int cont = 0;

@@ -68,17 +68,36 @@ int main() {
 	cout << tabla3x3->toStringBin() << endl;
 
 	cout << "aljkbfssdfdkjbnsd" << endl;
-	tabla3x3->setCajaCompletada(1, 1, 'A');
-	tabla3x3->setCajaCompletada(1, 3, 'A');
+
+	/*jugador* jug1 = new jugador('B');
+	jugador* jug2 = new jugador('A');*/
+	//tabla3x3->isCajaCompletada(*jug1);
+	cout << tabla3x3->toString();
+
+	tabla3x3->setLinea(0, 3);	//correcto
+	tabla3x3->setLinea(1, 2);	//correcto
+	tabla3x3->setLinea(1, 4);	//correcto
+	tabla3x3->setLinea(2, 3);	//correcto
+
+	tabla3x3->setLinea(4, 1);	//correcto
+	tabla3x3->setLinea(5, 0);	//correcto
+	tabla3x3->setLinea(5, 2);	//correcto
+	tabla3x3->setLinea(6, 1);	//correcto
+
+	//tabla3x3->isCajaCompletada(*jug2);
+	cout << tabla3x3->toString();
+
+	/*tabla3x3->setCajaCompletada(1, 1, 'A');*/
+	/*tabla3x3->setCajaCompletada(1, 3, 'A');
 	tabla3x3->setCajaCompletada(1, 5, 'B');
 	tabla3x3->setCajaCompletada(3, 1, 'B');
 	tabla3x3->setCajaCompletada(3, 3, 'A');
 	tabla3x3->setCajaCompletada(3, 5, 'A');
 	tabla3x3->setCajaCompletada(5, 1, 'B');
 	tabla3x3->setCajaCompletada(5, 3, 'A');
-	tabla3x3->setCajaCompletada(5, 5, 'A');
-	controladora co(veta);
-	co.control0();
+	tabla3x3->setCajaCompletada(5, 5, 'A');*/
+	/*controladora co(veta);
+	co.control0();*/
 	
 	return 0;
 }

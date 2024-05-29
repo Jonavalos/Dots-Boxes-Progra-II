@@ -68,6 +68,18 @@ void tabla_3x3::setCajaCompletada(int fila, int col, char jug) {
 	}
 }
 
+//void tabla_3x3::isCajaCompletada(jugador& jug) {
+//	for (int i = 0; i < _filas; i += 2) {
+//		for (int j = 1; j < _columnas; j += 2) {
+//			if (validar::isLibre(this, i + 1, j)) {
+//				if ((_tabla[i][j] != 32) && (_tabla[i + 1][j - 1] != 32) && (_tabla[i + 1][j + 1] != 32) && (_tabla[i + 2][j] != 32)) {
+//					_tabla[i + 1][j] = jug.getUsuario();
+//				}
+//			}
+//		}
+//	}
+//}
+
 string tabla_3x3::toString() const {
 	stringstream s;
 	int cont = 0;

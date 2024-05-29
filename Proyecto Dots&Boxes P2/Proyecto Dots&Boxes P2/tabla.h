@@ -2,6 +2,8 @@
 #include "bibliotecas.h"
 #include "baseObj.h"
 #include "validar.h"
+#include "jugador.h"
+
 class tabla:public baseObj { //interfaz del tablero
 public:
 	tabla(){}
@@ -10,6 +12,7 @@ public:
 	virtual void setLinea(int, int) = 0;
 	virtual bool lleno() = 0;
 	virtual void setCajaCompletada(int fila, int col, char jug) = 0;
+	//virtual void isCajaCompletada(jugador& jug) = 0;
 	virtual string toString() const = 0;
 
 	friend ostream& operator<<(ostream& COUT, tabla& tabla){

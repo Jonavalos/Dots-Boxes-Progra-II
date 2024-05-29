@@ -131,6 +131,7 @@
     <ClCompile Include="controladora.cpp" />
     <ClCompile Include="iteradorVecTablas.cpp" />
     <ClCompile Include="juego.cpp" />
+    <ClCompile Include="jugador.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tabla.cpp" />
     <ClCompile Include="tabla_3x3.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="controladora.h" />
     <ClInclude Include="iteradorVecTablas.h" />
     <ClInclude Include="juego.h" />
+    <ClInclude Include="jugador.h" />
     <ClInclude Include="tabla.h" />
     <ClInclude Include="tabla_3x3.h" />
     <ClInclude Include="tabla_3x4.h" />
