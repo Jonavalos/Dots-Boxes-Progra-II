@@ -14,5 +14,6 @@ public:
 
 	static bool isFueraLimites(tabla* mat, int fil, int col);
 
+	static bool isCasillaRodeada(tabla* mat, int fil, int col);
 };
 

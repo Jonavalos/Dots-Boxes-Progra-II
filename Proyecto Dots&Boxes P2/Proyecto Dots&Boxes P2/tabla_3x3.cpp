@@ -63,21 +63,20 @@ bool tabla_3x3::lleno() {
 }
 
 void tabla_3x3::setCajaCompletada(int fila, int col, char jug) {
-	if (validar::isLibre(this, fila, col)) {
+	if (validar::isCasillaRodeada(this, fila, col)) {
 		_tabla[fila][col] = jug;
 	}
 }
 
-//void tabla_3x3::isCajaCompletada(jugador& jug) {
-//	for (int i = 0; i < _filas; i += 2) {
-//		for (int j = 1; j < _columnas; j += 2) {
-//			if (validar::isLibre(this, i + 1, j)) {
-//				if ((_tabla[i][j] != 32) && (_tabla[i + 1][j - 1] != 32) && (_tabla[i + 1][j + 1] != 32) && (_tabla[i + 2][j] != 32)) {
-//					_tabla[i + 1][j] = jug.getUsuario();
-//				}
-//			}
-//		}
+//bool tabla_3x3::isRodeada(int i, int j) {
+//	if (!validar::isFueraLimites(this, i - 1, j) && !validar::isLibre(this, i - 1, j) && //arriba
+//		!validar::isFueraLimites(this, i, j - 1) && !validar::isLibre(this, i, j - 1) && //izq
+//		!validar::isFueraLimites(this, i, j + 1) && !validar::isLibre(this, i, j + 1) && //der
+//		!validar::isFueraLimites(this, i + 1, j) && !validar::isLibre(this, i + 1, j) //arriba
+//		) {
+//		return true;
 //	}
+//	return false;
 //}
 
 string tabla_3x3::toString() const {

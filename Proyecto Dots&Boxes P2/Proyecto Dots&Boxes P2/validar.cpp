@@ -40,3 +40,15 @@ bool validar::isFueraLimites(tabla* mat, int fil, int col)
 
 	return true;
 }
+
+bool validar::isCasillaRodeada(tabla* mat, int i, int j)
+{
+	if (!validar::isFueraLimites(mat, i - 1, j) && !validar::isLibre(mat, i - 1, j) && //arriba
+		!validar::isFueraLimites(mat, i, j - 1) && !validar::isLibre(mat, i, j - 1) && //izq
+		!validar::isFueraLimites(mat, i, j + 1) && !validar::isLibre(mat, i, j + 1) && //der
+		!validar::isFueraLimites(mat, i + 1, j) && !validar::isLibre(mat, i + 1, j) //arriba
+		) {
+		return true;
+	}
+	return false;
+}
