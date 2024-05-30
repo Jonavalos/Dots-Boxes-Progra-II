@@ -25,7 +25,7 @@ void controladora::control0() {
 		op1 = controlMenu();
 		switch (op1) {
 		case 1:
-			juego::mostrarVecTablas(_vec); break;
+			juego::jugadorVsJugador(_vec); break;
 		case 2:
 		default: break;
 		}

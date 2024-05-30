@@ -12,8 +12,10 @@ int juego::menuJuego() {
 	return op;
 }
 
-void juego::mostrarVecTablas(vecTablas* vec) {
+void juego::jugadorVsJugador(vecTablas* vec) {
 	int op, x, y;
+	jugador* jugador1 = new jugador('A');
+	jugador* jugador2 = new jugador('B');
 
 	cout << *vec << endl << endl;
 	cout << "Ingrese la posición de la tabla con la que desea jugar: "; cin >> op;
@@ -28,7 +30,7 @@ void juego::mostrarVecTablas(vecTablas* vec) {
 			cout << "Columna: "; cin >> y;
 		} while (!validar::isLibre(tabla1, x, y));
 		tabla1->setLinea(x, y);
-		//validar::completarLetras(tabla1, jugador1) AQUI VA CUANDO SE PUEDA
+		validar::completarLetras(tabla1, *jugador1); //AQUI VA CUANDO SE PUEDA
 		if (tabla1->lleno()) break;
 
 		// Jugador B
@@ -39,8 +41,10 @@ void juego::mostrarVecTablas(vecTablas* vec) {
 			cout << "Columna: "; cin >> y;
 		} while (!validar::isLibre(tabla1, x, y));
 		tabla1->setLinea(x, y);
-		//validar::completarLetras(tabla1, jugador2) AQUI VA CUANDO SE PUEDA
+		validar::completarLetras(tabla1, *jugador2); //AQUI VA CUANDO SE PUEDA
 	}
 
 	cout << *tabla1;
+	cout << jugador1->toString() << endl;
+	cout << jugador2->toString() << endl;
 }

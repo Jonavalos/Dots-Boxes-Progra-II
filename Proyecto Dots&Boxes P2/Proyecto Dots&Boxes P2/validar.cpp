@@ -71,37 +71,40 @@ bool validar::completarLetras(tabla* mat, jugador& p)
 	}
 
 	if (dynamic_cast<tabla_3x3*>(mat)) {
-		for (int i = 0;i < 7;i++) {
-			for (int j = 0;j < 7; j++) {
+		for (int i = 0; i < 7; i++) {
+			for (int j = 1; j < 7; j++) {
 				if (isCasillaRodeada(mat, i, j)) {
 					if (mat->setLetra(i, j, p.getUsuario())) {
-						return true;
+						p.sumarPuntos();
 					}				
 				}
 			}
 		}
+		return true;
 	}
 	if (dynamic_cast<tabla_3x4*>(mat)) {
-		for (int i = 0;i < 9;i++) {
-			for (int j = 0;j < 7; j++) {
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 7; j++) {
 				if (isCasillaRodeada(mat, i, j)) {
 					if (mat->setLetra(i, j, p.getUsuario())) {
-						return true;
+						p.sumarPuntos();
 					}
 				}
 			}
 		}
+		return true;
 	}
 	if (dynamic_cast<tabla_3x5*>(mat)) {
-		for (int i = 0;i < 11;i++) {
-			for (int j = 0;j < 7; j++) {
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 7; j++) {
 				if (isCasillaRodeada(mat, i, j)) {
 					if (mat->setLetra(i, j, p.getUsuario())) {
-						return true;
+						p.sumarPuntos();
 					}
 				}
 			}
 		}
+		return true;
 	}
 	return false;
 }

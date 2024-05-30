@@ -9,7 +9,7 @@ class juego {
 public:
 
 	static int menuJuego();
-	static void mostrarVecTablas(vecTablas* vec);
+	static void jugadorVsJugador(vecTablas* vec);
 
 };
 

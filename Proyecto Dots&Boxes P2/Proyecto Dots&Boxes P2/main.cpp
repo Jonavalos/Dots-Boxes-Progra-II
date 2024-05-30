@@ -11,14 +11,14 @@ int main() {
 
 	tabla* tabla3x3 = new tabla_3x3();
 
-	tabla3x3->setLinea(0, 1);	//correcto
-	tabla3x3->setLinea(9, 9);	//correcto
-	tabla3x3->setLinea(5, 6);	//correcto
-	tabla3x3->setLinea(1, 2);	//correcto
-	tabla3x3->setLinea(1, 0);	//correcto
-	tabla3x3->setLinea(2, 1);	//correcto
-	tabla3x3->setLinea(0, 0);	//incorrecto
-	tabla3x3->setLinea(2, 4);	//incorrecto
+	//tabla3x3->setLinea(0, 1);	//correcto
+	//tabla3x3->setLinea(9, 9);	//correcto
+	//tabla3x3->setLinea(5, 6);	//correcto
+	//tabla3x3->setLinea(1, 2);	//correcto
+	//tabla3x3->setLinea(1, 0);	//correcto
+	//tabla3x3->setLinea(2, 1);	//correcto
+	//tabla3x3->setLinea(0, 0);	//incorrecto
+	//tabla3x3->setLinea(2, 4);	//incorrecto
 	cout << *tabla3x3 << endl;
 	
 
@@ -27,9 +27,9 @@ int main() {
 	cout << "************----------************" << endl;
 	cout << endl;
 
-	//vecTablas* veta = new vecTablas();
-	//veta->agregar(tabla3x3);
-	//cout << *veta << endl;
+	vecTablas* veta = new vecTablas();
+	veta->agregar(tabla3x3);
+	cout << *veta << endl;
 	cout << endl;
 	
 	
@@ -43,60 +43,39 @@ int main() {
 	jugador* jug2 = new jugador('B');
 	//tabla3x3->isCajaCompletada(*jug1);
 
-	tabla3x3->setLinea(0, 3);	//correcto
-	tabla3x3->setLinea(1, 2);	//correcto
-	tabla3x3->setLinea(1, 4);	//correcto
-	tabla3x3->setLinea(2, 3);	//correcto
+	//tabla3x3->setLinea(0, 3);	//correcto
+	//tabla3x3->setLinea(1, 2);	//correcto
+	//tabla3x3->setLinea(1, 4);	//correcto
+	//tabla3x3->setLinea(2, 3);	//correcto
 
-	tabla3x3->setLinea(4, 1);	//correcto
-	tabla3x3->setLinea(5, 0);	//correcto
-	tabla3x3->setLinea(5, 2);	//correcto
-	tabla3x3->setLinea(6, 1);	//correcto
+	//tabla3x3->setLinea(4, 1);	//correcto
+	//tabla3x3->setLinea(5, 0);	//correcto
+	//tabla3x3->setLinea(5, 2);	//correcto
+	//tabla3x3->setLinea(6, 1);	//correcto
 
-	//tabla3x3->isCajaCompletada(*jug2);
 	cout << *tabla3x3 << endl;
-
-	/*tabla3x3->setCajaCompletada(1, 1, 'A');
+	
+	/*cout << validar::completarLetras(tabla3x3, *jug1) << endl;
 	cout << *tabla3x3 << endl;
-	tabla3x3->setCajaCompletada(1, 3, 'A');
+	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
 	cout << *tabla3x3 << endl;
-	tabla3x3->setCajaCompletada(1, 5, 'B');
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
 	cout << *tabla3x3 << endl;
-	tabla3x3->setCajaCompletada(3, 1, 'B');
+	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
 	cout << *tabla3x3 << endl;	
-	tabla3x3->setCajaCompletada(3, 3, 'A');
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
 	cout << *tabla3x3 << endl;
-	tabla3x3->setCajaCompletada(3, 5, 'A');
+	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
 	cout << *tabla3x3 << endl;
-	tabla3x3->setCajaCompletada(5, 1, 'B');
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
 	cout << *tabla3x3 << endl;
-	tabla3x3->setCajaCompletada(5, 3, 'A');
+	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
 	cout << *tabla3x3 << endl;
-	tabla3x3->setCajaCompletada(5, 5, 'A');
+	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
 	cout << *tabla3x3 << endl;*/
-
 	
-	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
-	cout << *tabla3x3 << endl;
-	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
-	cout << *tabla3x3 << endl;
-	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
-	cout << *tabla3x3 << endl;
-	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
-	cout << *tabla3x3 << endl;	
-	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
-	cout << *tabla3x3 << endl;
-	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
-	cout << *tabla3x3 << endl;
-	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
-	cout << *tabla3x3 << endl;
-	cout << validar::completarLetras(tabla3x3, *jug2) << endl;
-	cout << *tabla3x3 << endl;
-	cout << validar::completarLetras(tabla3x3, *jug1) << endl;
-	cout << *tabla3x3 << endl;
-	
-	/*controladora co(veta);
-	co.control0();*/
+	controladora co(veta);
+	co.control0();
 	
 	return 0;
 }

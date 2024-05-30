@@ -32,10 +32,13 @@ tabla* vecTablas::getTabla(int pos) {
 string vecTablas::toString() const
 {
 	stringstream s;
+	int cont = 0;
 	s << "LISTA->" << endl;
 	iteradorVecTablas* i = getIterador();
 	while (i->masElementos()) {
+		s << endl << "Tabla #" << cont << endl << endl;
 		s << *(i->proximoElemento());
+		cont++;
 	}
 	delete i;
 	s << "<-" << endl;
