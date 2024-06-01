@@ -16,13 +16,12 @@ bool validar::isLibre(tabla* mat, int fil, int col)
 	if (mat->getValor(fil, col) == 'A') {
 		return false;
 	}
+	if (mat->getValor(fil, col) == 'B') {
+		return false;
+	}
 	if (mat->getValor(fil, col) == 32) {
 		return true;
 	}
-	char a = 'a';
-	char z = 'z';
-	char A = 'A';
-	char Z = 'Z';
 	return false;
 }
 

@@ -49,6 +49,21 @@ void juego::jugadorVsJugador(vecTablas* vec) {
 	cout << jugador2->toString() << endl;
 }
 
+int juego::menuVsCompu() {
+	int op;
+
+	cout << "\tSeleccione la estrategia" << endl;
+	cout << "1. Aleatorio. " << endl;
+	cout << "2. Cercano. " << endl;
+	cout << "3. Periferico. " << endl;
+	cout << "4. Central. " << endl;
+	cout << "5. Por islas. " << endl;
+	cout << "6. SALIR." << endl;
+	cin >> op;
+
+	return op;
+}
+
 void juego::jugadorVsCompu(vecTablas* vec) {
 	int op, x, y;
 	jugador* jugador1 = new jugador('A');
@@ -60,7 +75,10 @@ void juego::jugadorVsCompu(vecTablas* vec) {
 	cout << "Ingrese la posición de la tabla con la que desea jugar: "; cin >> op;
 	tabla* tabla1 = vec->getTabla(op);
 	vecPosLib->llenar(tabla1);
+
+	strat->setStrat(random);
 	while (!tabla1->lleno()) {
+
 		// Jugador A
 		do {
 			cout << tabla1->toString() << endl;
@@ -75,8 +93,7 @@ void juego::jugadorVsCompu(vecTablas* vec) {
 		if (tabla1->lleno()) break;
 
 		// Compu
-		//if()
-		strat->setStrat(random);
+		cout << "Computadora: " << endl;
 		strat->runStrat(tabla1, *vecPosLib);
 		validar::completarLetras(tabla1, *jugador2);
 		cout << tabla1->toString() << endl;

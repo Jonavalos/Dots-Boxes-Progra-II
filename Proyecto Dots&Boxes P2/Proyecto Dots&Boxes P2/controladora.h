@@ -11,6 +11,14 @@ public:
 
 	void control0();
 
+	void control1();
+	int control2();
+	void control2_1();
+	void control2_2();
+	void control2_3();
+	void control2_4();
+	void control2_5();
+
 private:
 	vecTablas* _vec;
 

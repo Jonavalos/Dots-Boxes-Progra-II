@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ansi_term.cpp" />
     <ClCompile Include="baseObj.cpp" />
     <ClCompile Include="controladora.cpp" />
     <ClCompile Include="estrategia.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="vecTablas.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ansi_term.h" />
     <ClInclude Include="baseObj.h" />
     <ClInclude Include="bibliotecas.h" />
     <ClInclude Include="controladora.h" />

@@ -10,12 +10,15 @@
 #include "stratCercano.h"
 #include "stratIslas.h"
 #include "stratPeriferico.h"
+#include "ansi_term.h"
 
 class juego {
 public:
 
 	static int menuJuego();
 	static void jugadorVsJugador(vecTablas* vec);
+
+	static int menuVsCompu();
 	static void jugadorVsCompu(vecTablas* vec);
 
 };

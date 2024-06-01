@@ -4,10 +4,10 @@
 #include "tabla_3x5.h"
 #include "vecTablas.h"
 #include "controladora.h"
+#include "ansi_term.h"
 using namespace std;
 
 int main() {
-
 
 	tabla* tabla3x3 = new tabla_3x3();
 
@@ -65,6 +65,11 @@ int main() {
 	tabla3x3->setLinea(6, 1);	//correcto
 
 	cout << *tabla3x3 << endl;
+
+	cout << ansi_term::clear();
+	cout << ansi_term::home();
+
+	cout << "Mé Gusta el PÉNe" << endl;
 	
 	controladora co(veta);
 	co.control0();
