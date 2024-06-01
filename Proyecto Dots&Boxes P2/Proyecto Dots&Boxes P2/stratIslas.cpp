@@ -1,5 +1,5 @@
 #include "stratIslas.h"
 
-void stratIslas::strat(tabla* mat) {
+void stratIslas::strat(tabla* mat, vecPosicionesLibres& vec) {
 
 }

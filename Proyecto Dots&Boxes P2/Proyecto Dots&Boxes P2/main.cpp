@@ -23,11 +23,11 @@ int main() {
 	tabla3x3->setLinea(2, 5);	//correcto
 	tabla3x3->setLinea(3, 0);	//correcto
 	tabla3x3->setLinea(3, 2);	//correcto
-	tabla3x3->setLinea(3, 4);	//correcto
-	tabla3x3->setLinea(3, 6);	//correcto
-	tabla3x3->setLinea(4, 3);	//correcto
-	tabla3x3->setLinea(4, 5);	//correcto
-	tabla3x3->setLinea(6, 3);	//correcto
+	//tabla3x3->setLinea(3, 4);	//correcto
+	//tabla3x3->setLinea(3, 6);	//correcto
+	//tabla3x3->setLinea(4, 3);	//correcto
+	//tabla3x3->setLinea(4, 5);	//correcto
+	//tabla3x3->setLinea(6, 3);	//correcto
 	//tabla3x3->setLinea(0, 0);	//incorrecto
 	//tabla3x3->setLinea(2, 4);	//incorrecto
 	cout << *tabla3x3 << endl;

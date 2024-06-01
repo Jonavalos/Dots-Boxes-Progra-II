@@ -1,5 +1,5 @@
 #include "stratCercano.h"
 
-void stratCercano::strat(tabla* mat) {
+void stratCercano::strat(tabla* mat, vecPosicionesLibres& vec) {
 
 }

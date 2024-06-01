@@ -26,6 +26,23 @@ bool validar::isLibre(tabla* mat, int fil, int col)
 	return false;
 }
 
+bool validar::isValidaParaLinea(int fil, int col)
+{
+	//no usar metodo solo, siempre acompanarlo de otras validaciones
+	//pues no verifica limites ni si esta ocupada
+
+	if (fil % 2 != 0 && fil!=0) { //fila impar
+		if (col % 2 != 0 && col!=0) { //columna impar
+			return false; // para fil sea impar, col tiene que ser par
+		}
+	}
+
+	//si no se cumple, o sea fila par
+	//da igual que la columna sea par o impar
+	return true;
+
+}
+
 bool validar::isFueraLimites(tabla* mat, int fil, int col)
 {
 	if (mat == nullptr) {

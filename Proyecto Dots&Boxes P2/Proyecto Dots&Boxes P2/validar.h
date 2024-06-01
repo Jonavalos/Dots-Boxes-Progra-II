@@ -12,6 +12,8 @@ class validar
 public:
 	static bool isLibre(tabla* mat, int fil, int col);
 
+	static bool isValidaParaLinea(int fil, int col);
+
 	static bool isFueraLimites(tabla* mat, int fil, int col);
 
 	static bool isCasillaRodeada(tabla* mat, int fil, int col);

@@ -4,6 +4,6 @@
 
 class stratPeriferico : public estrategia {
 public:
-	virtual void strat(tabla* mat);
+	virtual void strat(tabla* mat, vecPosicionesLibres& vec);
 
 };
