@@ -43,12 +43,6 @@ string vecTablas::toString() const
 	delete i;
 	s << "<-" << endl;
 	return s.str();
-
-	/*stringstream s;
-	for (int i = 0;i < can;i++) {
-		s << vec[i] << endl;
-	}
-	return s.str();*/
 }
 
 iteradorVecTablas* vecTablas::getIterador() const

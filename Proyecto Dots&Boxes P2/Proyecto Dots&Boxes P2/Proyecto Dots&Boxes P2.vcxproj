@@ -129,29 +129,47 @@
   <ItemGroup>
     <ClCompile Include="baseObj.cpp" />
     <ClCompile Include="controladora.cpp" />
+    <ClCompile Include="estrategia.cpp" />
     <ClCompile Include="iteradorVecTablas.cpp" />
     <ClCompile Include="juego.cpp" />
     <ClCompile Include="jugador.cpp" />
+    <ClCompile Include="jugadorStrat.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="posicionLibre.cpp" />
+    <ClCompile Include="stratAleatorio.cpp" />
+    <ClCompile Include="stratCentral.cpp" />
+    <ClCompile Include="stratCercano.cpp" />
+    <ClCompile Include="stratIslas.cpp" />
+    <ClCompile Include="stratPeriferico.cpp" />
     <ClCompile Include="tabla.cpp" />
     <ClCompile Include="tabla_3x3.cpp" />
     <ClCompile Include="tabla_3x4.cpp" />
     <ClCompile Include="tabla_3x5.cpp" />
     <ClCompile Include="validar.cpp" />
+    <ClCompile Include="vecPosicionesLibres.cpp" />
     <ClCompile Include="vecTablas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="baseObj.h" />
     <ClInclude Include="bibliotecas.h" />
     <ClInclude Include="controladora.h" />
+    <ClInclude Include="estrategia.h" />
     <ClInclude Include="iteradorVecTablas.h" />
     <ClInclude Include="juego.h" />
     <ClInclude Include="jugador.h" />
+    <ClInclude Include="jugadorStrat.h" />
+    <ClInclude Include="posicionLibre.h" />
+    <ClInclude Include="stratAleatorio.h" />
+    <ClInclude Include="stratCentral.h" />
+    <ClInclude Include="stratCercano.h" />
+    <ClInclude Include="stratIslas.h" />
+    <ClInclude Include="stratPeriferico.h" />
     <ClInclude Include="tabla.h" />
     <ClInclude Include="tabla_3x3.h" />
     <ClInclude Include="tabla_3x4.h" />
     <ClInclude Include="tabla_3x5.h" />
     <ClInclude Include="validar.h" />
+    <ClInclude Include="vecPosicionesLibres.h" />
     <ClInclude Include="vecTablas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

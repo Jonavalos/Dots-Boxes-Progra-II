@@ -27,6 +27,7 @@ void controladora::control0() {
 		case 1:
 			juego::jugadorVsJugador(_vec); break;
 		case 2:
+			juego::jugadorVsCompu(_vec); break;
 		default: break;
 		}
 	} while (op1 != 3);
