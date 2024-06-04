@@ -72,7 +72,28 @@ bool tablaPrincipal::agregar(tabla* tab)
 			}
 		}
 	}
-	
+	if (dynamic_cast<tabla_3x4*>(tab)) {
+		for (int i = 0; i < _filas; i++) {
+			for (int j = 0; j < _columnas; j++) {
+				if (i + 7 < 20 && j + 7 < 20) { //limite
+					if (isLibreBin(i, j, i + 6, j + 6)) { //esta libre
+						for (int p = i; p < i + 7; p++) {
+							for (int q = j; q < j + 7; q++) {
+								_tabla[p][q] = char('+');
+								if (q % 2 != 0) { _tabla[p][q] = char(' '); }
+								if (p % 2 != 0) { _tabla[p][q] = char(' '); }
+							}
+						}
+						return true;
+					}
+
+				}
+
+
+
+			}
+		}
+	}
 
 	return false;
 }
@@ -80,12 +101,28 @@ bool tablaPrincipal::agregar(tabla* tab)
 string tablaPrincipal::toString()
 {
 	stringstream s;
+	int cont = 0;
+
+	//para los índices de la parte de arriba
+	s << setw(4) << "0";
+	for (int i = 0; i < 19; i++) {
+		s << setw(3) << i + 1;
+	}
+	s << endl << endl;
+
 	for (int i = 0; i < _filas; i++) {
+		//if () {
+		s << cont << "  "; cont++;
+		//}
+		//else {
+		//	s << "   ";
+		//}
 		for (int j = 0; j < _columnas; j++) {
 			s << _tabla[i][j] << "  ";
 		}
-		s << '\n';
+		s << endl;
 	}
+
 	return s.str();
 }
 
