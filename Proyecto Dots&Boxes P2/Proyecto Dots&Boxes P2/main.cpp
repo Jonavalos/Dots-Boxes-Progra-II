@@ -1,78 +1,60 @@
 #include <iostream>
-#include "tabla_3x3.h"
-#include "tabla_3x4.h"
-#include "tabla_3x5.h"
-#include "vecTablas.h"
 #include "controladora.h"
 #include "ansi_term.h"
+#include "tablaPrincipal.h"
 using namespace std;
 
 int main() {
 
 	tabla* tabla3x3 = new tabla_3x3();
-
-	tabla3x3->setLinea(0, 1);	//correcto
-	tabla3x3->setLinea(9, 9);	//correcto
-	tabla3x3->setLinea(5, 6);	//correcto
-	tabla3x3->setLinea(1, 2);	//correcto
-	tabla3x3->setLinea(1, 0);	//correcto
-	tabla3x3->setLinea(2, 1);	//correcto
-
-	tabla3x3->setLinea(0, 5);	//correcto
-	tabla3x3->setLinea(1, 6);	//correcto
-	tabla3x3->setLinea(2, 5);	//correcto
-	tabla3x3->setLinea(3, 0);	//correcto
-	tabla3x3->setLinea(3, 2);	//correcto
+	cout << *tabla3x3 << endl;
+	//tabla3x3->setLinea(0, 1);	//correcto
+	//tabla3x3->setLinea(9, 9);	//correcto
+	//tabla3x3->setLinea(5, 6);	//correcto
+	//tabla3x3->setLinea(1, 2);	//correcto
+	//tabla3x3->setLinea(1, 0);	//correcto
+	//tabla3x3->setLinea(2, 1);	//correcto
+	//tabla3x3->setLinea(0, 5);	//correcto
+	//tabla3x3->setLinea(1, 6);	//correcto
+	//tabla3x3->setLinea(2, 5);	//correcto
+	//tabla3x3->setLinea(3, 0);	//correcto
+	//tabla3x3->setLinea(3, 2);	//correcto
 	//tabla3x3->setLinea(3, 4);	//correcto
 	//tabla3x3->setLinea(3, 6);	//correcto
 	//tabla3x3->setLinea(4, 3);	//correcto
 	//tabla3x3->setLinea(4, 5);	//correcto
 	//tabla3x3->setLinea(6, 3);	//correcto
+	//tabla3x3->setLinea(0, 3);	//correcto
+	//tabla3x3->setLinea(1, 2);	//correcto
+	//tabla3x3->setLinea(1, 4);	//correcto
+	//tabla3x3->setLinea(2, 3);	//correcto
+	//tabla3x3->setLinea(4, 1);	//correcto
+	//tabla3x3->setLinea(5, 0);	//correcto
+	//tabla3x3->setLinea(5, 2);	//correcto
+	//tabla3x3->setLinea(6, 1);	//correcto
 	//tabla3x3->setLinea(0, 0);	//incorrecto
 	//tabla3x3->setLinea(2, 4);	//incorrecto
-	cout << *tabla3x3 << endl;
+	//cout << *tabla3x3 << endl;
 	
 
 
-	cout << endl;
-	cout << "************----------************" << endl;
-	cout << endl;
-
-	vecTablas* veta = new vecTablas();
+	/*vecTablas* veta = new vecTablas();
 	veta->agregar(tabla3x3);
 	cout << *veta << endl;
-	cout << endl;
+	cout << endl;*/
 	
+	tablaPrincipal* princial = new tablaPrincipal();
+	princial->agregar(tabla3x3);
+	princial->actualizarTabBinaria();
+	cout<< princial->toStringBin() << endl;
+	princial->agregar(tabla3x3);
+	princial->actualizarTabBinaria();
+	cout<<princial->toString() << endl;
+	cout << princial->toStringBin() << endl;
 	
 	
 	cout <<"bbb"<< endl;
-	/*cout << tabla3x3->toStringSimple() << endl;
-	tabla3x3->actualizarTabBinaria();
-	cout << tabla3x3->toStringBin() << endl;*/
 
-	jugador* jug1 = new jugador('A');
-	jugador* jug2 = new jugador('B');
-	//tabla3x3->isCajaCompletada(*jug1);
-
-	tabla3x3->setLinea(0, 3);	//correcto
-	tabla3x3->setLinea(1, 2);	//correcto
-	tabla3x3->setLinea(1, 4);	//correcto
-	tabla3x3->setLinea(2, 3);	//correcto
-
-	tabla3x3->setLinea(4, 1);	//correcto
-	tabla3x3->setLinea(5, 0);	//correcto
-	tabla3x3->setLinea(5, 2);	//correcto
-	tabla3x3->setLinea(6, 1);	//correcto
-
-	cout << *tabla3x3 << endl;
-
-	cout << ansi_term::clear();
-	cout << ansi_term::home();
-
-	cout << "Mé Gusta el PÉNe" << endl;
-	
-	controladora co(veta);
-	co.control0();
 	
 	return 0;
 }

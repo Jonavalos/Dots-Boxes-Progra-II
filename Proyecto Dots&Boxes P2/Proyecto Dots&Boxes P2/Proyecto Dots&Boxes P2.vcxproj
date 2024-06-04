@@ -143,6 +143,7 @@
     <ClCompile Include="stratIslas.cpp" />
     <ClCompile Include="stratPeriferico.cpp" />
     <ClCompile Include="tabla.cpp" />
+    <ClCompile Include="tablaPrincipal.cpp" />
     <ClCompile Include="tabla_3x3.cpp" />
     <ClCompile Include="tabla_3x4.cpp" />
     <ClCompile Include="tabla_3x5.cpp" />
@@ -167,6 +168,7 @@
     <ClInclude Include="stratIslas.h" />
     <ClInclude Include="stratPeriferico.h" />
     <ClInclude Include="tabla.h" />
+    <ClInclude Include="tablaPrincipal.h" />
     <ClInclude Include="tabla_3x3.h" />
     <ClInclude Include="tabla_3x4.h" />
     <ClInclude Include="tabla_3x5.h" />
