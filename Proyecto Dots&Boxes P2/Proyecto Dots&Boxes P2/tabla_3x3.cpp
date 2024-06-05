@@ -154,4 +154,9 @@ bool tabla_3x3::setLetra(int fil, int col, char letra)
 	return false;
 }
 
+int tabla_3x3::getFila()
+{
+	return _filas;
+}
+
 

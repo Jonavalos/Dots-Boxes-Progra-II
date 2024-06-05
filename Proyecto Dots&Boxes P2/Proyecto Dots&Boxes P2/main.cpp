@@ -7,10 +7,11 @@ using namespace std;
 int main() {
 
 	tabla* tabla3x3 = new tabla_3x3();
-	tabla* tabla3x4 = new tabla_3x4();
+	//tabla* tabla3x4 = new tabla_3x4();
+	
+	//cout << *tabla3x4 << endl;
+	tabla3x3->setLinea(0, 1);	//correcto
 	cout << *tabla3x3 << endl;
-	cout << *tabla3x4 << endl;
-	//tabla3x3->setLinea(0, 1);	//correcto
 	//tabla3x3->setLinea(9, 9);	//correcto
 	//tabla3x3->setLinea(5, 6);	//correcto
 	//tabla3x3->setLinea(1, 2);	//correcto
@@ -40,12 +41,12 @@ int main() {
 	
 
 
-	/*vecTablas* veta = new vecTablas();
+	vecTablas* veta = new vecTablas();
 	veta->agregar(tabla3x3);
 	cout << *veta << endl;
-	cout << endl;*/
+	cout << endl;
 	
-	tablaPrincipal* princial = new tablaPrincipal();
+	/*tablaPrincipal* princial = new tablaPrincipal();
 	princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
 	princial->agregar(tabla3x4);
@@ -53,12 +54,12 @@ int main() {
 	cout << princial->toString() << endl;
 	princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
-	cout<<princial->toString() << endl;
-	cout << princial->toStringBin() << endl;
-	
+	cout << princial->toString() << endl;
+	cout << princial->toStringBin() << endl;*/
 	
 	cout <<"bbb"<< endl;
 
+	juego::jugadorVsCompuCer(veta);
 	
 	return 0;
 }

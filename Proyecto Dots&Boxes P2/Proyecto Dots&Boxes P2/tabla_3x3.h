@@ -17,6 +17,7 @@ public:
 	virtual string toStringSimple();
 	virtual char getValor(int f, int c);
 	virtual bool setLetra(int fil, int col, char letra);
+	virtual int getFila();
 private:
 	char** _tabla;
 	bool** _tablaBin;

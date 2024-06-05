@@ -56,7 +56,7 @@ int controladora::control2() {
 }
 
 void controladora::control2_1() {
-	juego::jugadorVsCompu(_vec);
+	juego::jugadorVsCompuAl(_vec);
 }
 
 void controladora::control2_2()

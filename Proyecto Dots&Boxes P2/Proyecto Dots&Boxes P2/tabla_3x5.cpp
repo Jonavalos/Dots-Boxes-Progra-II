@@ -107,3 +107,8 @@ bool tabla_3x5::setLetra(int fil, int col, char letra)
 	return false;
 }
 
+int tabla_3x5::getFila()
+{
+	return _filas;
+}
+

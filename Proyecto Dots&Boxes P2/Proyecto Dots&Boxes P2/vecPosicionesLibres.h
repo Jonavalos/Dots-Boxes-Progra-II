@@ -8,6 +8,7 @@ public:
 	virtual ~vecPosicionesLibres();
 
 	void llenar(tabla* mat);
+	void llenarOcupadas(tabla* mat);
 	int getCan();
 
 	bool add(int, int);
