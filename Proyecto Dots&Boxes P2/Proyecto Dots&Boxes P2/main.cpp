@@ -48,8 +48,10 @@ int main() {
 	tablaPrincipal* princial = new tablaPrincipal();
 	princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
-	cout<< princial->toStringBin() << endl;
 	princial->agregar(tabla3x4);
+	princial->actualizarTabBin2();
+	cout << princial->toString() << endl;
+	princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
 	cout<<princial->toString() << endl;
 	cout << princial->toStringBin() << endl;
