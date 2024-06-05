@@ -2,6 +2,8 @@
 #include "controladora.h"
 #include "ansi_term.h"
 #include "tablaPrincipal.h"
+#include "jugada.h"
+
 using namespace std;
 
 int main() {
@@ -10,8 +12,8 @@ int main() {
 	//tabla* tabla3x4 = new tabla_3x4();
 	
 	//cout << *tabla3x4 << endl;
-	tabla3x3->setLinea(0, 1);	//correcto
-	cout << *tabla3x3 << endl;
+	//tabla3x3->setLinea(0, 1);	//correcto
+	//cout << *tabla3x3 << endl;
 	//tabla3x3->setLinea(9, 9);	//correcto
 	//tabla3x3->setLinea(5, 6);	//correcto
 	//tabla3x3->setLinea(1, 2);	//correcto
@@ -60,7 +62,7 @@ int main() {
 	cout <<"bbb"<< endl;
 
 	juego::jugadorVsCompuCer(veta);
-	
+
 	return 0;
 }
 /*

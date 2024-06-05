@@ -3,6 +3,7 @@
 #include "tabla_3x4.h"
 #include "tabla_3x5.h"
 #include "jugador.h"
+#include "jugada.h"
 bool validar::isLibre(tabla* mat, int fil, int col)
 {
 	if (mat->getValor(fil, col) == '-'
@@ -123,4 +124,16 @@ bool validar::completarLetras(tabla* mat, jugador& p)
 		return true;
 	}
 	return false;
+}
+
+bool validar::isCerca(jugada* ultimaJugada, int i,  int j) {
+
+	if ((ultimaJugada->getFila() - i <= 2 && ultimaJugada->getFila() - i >= 0) || (i - ultimaJugada->getFila() <= 2 && i - ultimaJugada->getFila() >= 0)) {
+		if ((j - ultimaJugada->getCol() <= 1 && j - ultimaJugada->getCol() >= 0) || (ultimaJugada->getCol() - j <= 1 && ultimaJugada->getCol() - j >= 0)) {
+			return true;
+		}
+	}
+	else {
+		return false;
+	}
 }

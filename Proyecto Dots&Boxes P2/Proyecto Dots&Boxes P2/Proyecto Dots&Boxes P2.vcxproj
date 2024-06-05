@@ -133,6 +133,7 @@
     <ClCompile Include="estrategia.cpp" />
     <ClCompile Include="iteradorVecTablas.cpp" />
     <ClCompile Include="juego.cpp" />
+    <ClCompile Include="jugada.cpp" />
     <ClCompile Include="jugador.cpp" />
     <ClCompile Include="jugadorStrat.cpp" />
     <ClCompile Include="main.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="estrategia.h" />
     <ClInclude Include="iteradorVecTablas.h" />
     <ClInclude Include="juego.h" />
+    <ClInclude Include="jugada.h" />
     <ClInclude Include="jugador.h" />
     <ClInclude Include="jugadorStrat.h" />
     <ClInclude Include="posicionLibre.h" />

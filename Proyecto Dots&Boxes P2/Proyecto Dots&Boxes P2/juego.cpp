@@ -111,10 +111,10 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 	jugadorStrat* strat = new jugadorStrat();
 	estrategia* cercano = new stratCercano();
 	vecPosicionesLibres* vecPosLib = new vecPosicionesLibres;
+	jugada* jugada1 = nullptr;
 	cout << *vec << endl << endl;
 	cout << "Ingrese la posición de la tabla con la que desea jugar: "; cin >> op;
 	tabla* tabla1 = vec->getTabla(op);
-	vecPosLib->llenar(tabla1);
 
 	strat->setStrat(cercano);
 	while (!tabla1->lleno()) {
@@ -127,16 +127,19 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 			cout << "Columna: "; cin >> y;
 		} while (!validar::isValidaParaLinea(x, y) || !validar::isLibre(tabla1, x, y));
 		tabla1->setLinea(x, y);
-		vecPosLib->remove(x, y);
 		validar::completarLetras(tabla1, *jugador1);
 		cout << tabla1->toString() << endl;
 		if (tabla1->lleno()) break;
+		//después de que está lleno, para ver si se puede seguir jugando
+		jugada1 = new jugada(x, y);
+		vecPosLib->llenarCerca(tabla1, jugada1);
 
 		// Compu
 		cout << "Computadora: " << endl;
 		strat->runStrat(tabla1, *vecPosLib);
 		validar::completarLetras(tabla1, *jugador2);
 		cout << tabla1->toString() << endl;
+		vecPosLib->removeAll();
 	}
 
 	cout << *tabla1;

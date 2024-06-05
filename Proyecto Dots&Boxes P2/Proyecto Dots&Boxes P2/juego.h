@@ -11,6 +11,7 @@
 #include "stratIslas.h"
 #include "stratPeriferico.h"
 #include "ansi_term.h"
+#include "jugada.h"
 
 class juego {
 public:
