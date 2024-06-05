@@ -9,7 +9,8 @@ class tablaPrincipal
 private:
 	int _filas; int _columnas;
 	char** _tabla;
-	bool** _tablaBin;
+	bool** _tablaBin; //procedimientos
+	bool** _tablaBin2;//agregar (ver si hay disponibilidad)
 
 public:
 	tablaPrincipal();
@@ -19,8 +20,8 @@ public:
 
 	//
 
-	virtual void actualizarTabBinaria();
-	bool isLibreBin(int x, int y, int f, int c);
+	virtual void actualizarTabBin2();
+	bool isLibreBin2(int x, int y, int f, int c);
 	virtual string toStringBin();
 
 };

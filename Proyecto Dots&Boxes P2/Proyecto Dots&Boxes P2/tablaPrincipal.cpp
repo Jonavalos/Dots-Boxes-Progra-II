@@ -22,6 +22,13 @@ tablaPrincipal::tablaPrincipal()
 			_tablaBin[i][j] = 0;
 		}
 	}
+	_tablaBin2 = new bool* [_filas];
+	for (int i = 0; i < _filas; i++) {
+		_tablaBin2[i] = new bool[_filas];
+		for (int j = 0; j < _columnas; j++) {
+			_tablaBin2[i][j] = 0;
+		}
+	}
 }
 
 tablaPrincipal::~tablaPrincipal()
@@ -38,13 +45,31 @@ bool tablaPrincipal::agregar(tabla* tab)
 			for (int i = 0; i < 7; i++) {
 				for (int j = 0; j < 7; j++) {
 					_tabla[i][j] = char('+');
-					if (j % 2 != 0) { _tabla[i][j] = char(' '); }
-					if (i % 2 != 0) { _tabla[i][j] = char(' '); }
+					if (j % 2 != 0) { 
+						_tabla[i][j] = char(' ');
+						_tablaBin[i][j] = 1;
+					}
+					if (i % 2 != 0) { 
+						_tabla[i][j] = char(' ');
+						_tablaBin[i][j] = 1;
+					}
 				}
 			}
 		}
 		if (dynamic_cast<tabla_3x4*>(tab)) {
-
+			for (int i = 0; i < 9; i++) {
+				for (int j = 0; j < 7; j++) {
+					_tabla[i][j] = char('+');
+					if (j % 2 != 0) {
+						_tabla[i][j] = char(' ');
+						_tablaBin[i][j] = 1;
+					}
+					if (i % 2 != 0) {
+						_tabla[i][j] = char(' ');
+						_tablaBin[i][j] = 1;
+					}
+				}
+			}
 		}
 		if (dynamic_cast<tabla_3x5*>(tab)) {
 
@@ -54,12 +79,19 @@ bool tablaPrincipal::agregar(tabla* tab)
 		for (int i = 0; i < _filas; i++) {
 			for (int j = 0; j < _columnas; j++) {
 				if (i + 7 < 20 && j + 7 < 20) { //limite
-					if (isLibreBin(i, j, i+6, j+6)) { //esta libre
+					if (isLibreBin2(i, j, i+6, j+6)) { //esta libre
 						for (int p = i; p < i+7; p++) {
 							for (int q = j; q < j+7; q++) {
 								_tabla[p][q] = char('+');
-								if (q % 2 != 0) { _tabla[p][q] = char(' '); }
-								if (p % 2 != 0) { _tabla[p][q] = char(' '); }
+								if (q % 2 != 0) { 
+									_tabla[p][q] = char(' '); 
+									_tablaBin[p][q] = 1; 
+								}
+								if (p % 2 != 0) { 
+									_tabla[p][q] = char(' '); 
+									_tablaBin[p][q] = 1; 
+									_tablaBin[p][q] = 1; 
+								}
 							}
 						}
 						return true;
@@ -75,9 +107,37 @@ bool tablaPrincipal::agregar(tabla* tab)
 	if (dynamic_cast<tabla_3x4*>(tab)) {
 		for (int i = 0; i < _filas; i++) {
 			for (int j = 0; j < _columnas; j++) {
-				if (i + 7 < 20 && j + 7 < 20) { //limite
-					if (isLibreBin(i, j, i + 6, j + 6)) { //esta libre
-						for (int p = i; p < i + 7; p++) {
+				if (i + 9 < 20 && j + 7 < 20) { //limite
+					if (isLibreBin2(i, j, i + 8, j + 6)) { //esta libre
+						for (int p = i; p < i + 9; p++) {//rellenar
+							for (int q = j; q < j + 7; q++) {
+								_tabla[p][q] = char('+');
+								if (q % 2 != 0) { 
+									_tabla[p][q] = char(' '); 
+									_tablaBin[p][q] = 1; 
+								}
+								if (p % 2 != 0) { 
+									_tabla[p][q] = char(' '); 
+									_tablaBin[p][q] = 1; 
+								}
+							}
+						}
+						return true;
+					}
+
+				}
+
+
+
+			}
+		}
+	}
+	if (dynamic_cast<tabla_3x5*>(tab)) {
+		for (int i = 0; i < _filas; i++) {
+			for (int j = 0; j < _columnas; j++) {
+				if (i + 11 < 20 && j + 7 < 20) { //limite
+					if (isLibreBin2(i, j, i + 10, j + 6)) { //esta libre
+						for (int p = i; p < i + 11; p++) {//rellenar
 							for (int q = j; q < j + 7; q++) {
 								_tabla[p][q] = char('+');
 								if (q % 2 != 0) { _tabla[p][q] = char(' '); }
@@ -94,7 +154,6 @@ bool tablaPrincipal::agregar(tabla* tab)
 			}
 		}
 	}
-
 	return false;
 }
 
@@ -126,25 +185,25 @@ string tablaPrincipal::toString()
 	return s.str();
 }
 
-void tablaPrincipal::actualizarTabBinaria()
+void tablaPrincipal::actualizarTabBin2()
 {
 	for (int i = 0; i < _filas; i++) {
 		for (int j = 0; j < _columnas; j++) {
 			if (_tabla[i][j] == 32) {
-				_tablaBin[i][j] = 1;
+				_tablaBin2[i][j] = 1;
 			}
 			else {
-				_tablaBin[i][j] = 0;
+				_tablaBin2[i][j] = 0;
 			}
 		}
 	}
 }
 
-bool tablaPrincipal::isLibreBin(int x, int y, int f, int c)
+bool tablaPrincipal::isLibreBin2(int x, int y, int f, int c)
 {
 	for (int i = x; i < f; i++) {
 		for (int j = y; j < c; j++) {
-			if (_tablaBin[i][j] == 0)
+			if (_tablaBin2[i][j] == 0)
 				return false;
 		}
 	}

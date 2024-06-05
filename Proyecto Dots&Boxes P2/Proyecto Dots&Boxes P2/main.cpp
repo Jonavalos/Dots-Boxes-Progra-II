@@ -7,7 +7,9 @@ using namespace std;
 int main() {
 
 	tabla* tabla3x3 = new tabla_3x3();
+	tabla* tabla3x4 = new tabla_3x4();
 	cout << *tabla3x3 << endl;
+	cout << *tabla3x4 << endl;
 	//tabla3x3->setLinea(0, 1);	//correcto
 	//tabla3x3->setLinea(9, 9);	//correcto
 	//tabla3x3->setLinea(5, 6);	//correcto
@@ -45,10 +47,10 @@ int main() {
 	
 	tablaPrincipal* princial = new tablaPrincipal();
 	princial->agregar(tabla3x3);
-	princial->actualizarTabBinaria();
+	princial->actualizarTabBin2();
 	cout<< princial->toStringBin() << endl;
-	princial->agregar(tabla3x3);
-	princial->actualizarTabBinaria();
+	princial->agregar(tabla3x4);
+	princial->actualizarTabBin2();
 	cout<<princial->toString() << endl;
 	cout << princial->toStringBin() << endl;
 	
