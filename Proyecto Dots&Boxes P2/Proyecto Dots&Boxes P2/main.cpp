@@ -59,7 +59,7 @@ int main() {
 	cout << princial->toString() << endl;
 	cout << princial->toStringBin() << endl;*/
 	
-	cout <<"bbb"<< endl;
+	cout <<"abc"<< endl;
 
 	juego::jugadorVsCompuCer(veta);
 
