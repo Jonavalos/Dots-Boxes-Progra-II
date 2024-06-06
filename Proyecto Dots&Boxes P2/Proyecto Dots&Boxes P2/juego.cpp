@@ -12,6 +12,18 @@ int juego::menuJuego() {
 	return op;
 }
 
+int juego::menuTablero() {
+	int op;
+
+	cout << "\tSeleccione el tipo de tablero" << endl;
+	cout << "1. Regular. " << endl;
+	cout << "2. Irregular. " << endl;
+	cout << "3. SALIR." << endl;
+	cin >> op;
+
+	return op;
+}
+
 void juego::jugadorVsJugador(vecTablas* vec) {
 	int op, x, y;
 	jugador* jugador1 = new jugador('A');
@@ -134,14 +146,13 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 		//después de que está lleno, para ver si se puede seguir jugando
 		jugada1 = new jugada(x, y);
 		vecPosLib->llenarCerca(tabla1, jugada1);
-		//vecPosLib->llenar(tabla1);
 
 		// Compu
 		cout << "Computadora: " << endl;
 		strat->runStrat(tabla1, *vecPosLib);
 		validar::completarLetras(tabla1, *jugador2);
 		cout << tabla1->toString() << endl;
-		//vecPosLib->removeAll();
+		vecPosLib->removeAll();
 	}
 
 	cout << *tabla1;

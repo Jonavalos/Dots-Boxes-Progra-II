@@ -40,7 +40,7 @@ void vecPosicionesLibres::llenar(tabla* mat)
 void vecPosicionesLibres::llenarCerca(tabla* mat, jugada* jug) {
 	for (int i = 0; i < 7; i++) {
 		for (int j = 0; j < 7; j++) {
-			if (validar::isLibre(mat, i, j)) {
+			if (validar::isLibre(mat, i, j) && validar::isValidaParaLinea(i, j)) {
 				if (validar::isCerca(jug, i, j)) {
 					this->add(i, j);
 				}

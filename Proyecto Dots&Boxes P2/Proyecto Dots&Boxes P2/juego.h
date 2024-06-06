@@ -17,6 +17,7 @@ class juego {
 public:
 
 	static int menuJuego();
+	static int menuTablero();
 	static void jugadorVsJugador(vecTablas* vec);
 
 	static int menuVsCompu();

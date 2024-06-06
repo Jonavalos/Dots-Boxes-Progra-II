@@ -1,7 +1,7 @@
 #include "stratCercano.h"
 
 bool stratCercano::strat(tabla* mat, vecPosicionesLibres& vec) {
-	srand(time(0));
+	srand((long)time(0));
 	int x = rand() % (vec.getCan() + 1);
 
 	if (vec.getPosLibre(x) != nullptr) {

@@ -34,10 +34,10 @@ void controladora::control0() {
 
 				switch (op2) {
 				case 1: control2_1(); break;
-				case 2: 
-				case 3: 
-				case 4: 
-				case 5: 
+				case 2: control2_2(); break;
+				case 3: control2_3(); break;
+				case 4: control2_4(); break;
+				case 5: control2_5(); break;
 				default: break;
 				}
 			} while (op2 != 6);

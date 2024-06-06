@@ -43,10 +43,10 @@ int main() {
 	
 
 
-	vecTablas* veta = new vecTablas();
+	/*vecTablas* veta = new vecTablas();
 	veta->agregar(tabla3x3);
 	cout << *veta << endl;
-	cout << endl;
+	cout << endl;*/
 	
 	/*tablaPrincipal* princial = new tablaPrincipal();
 	princial->agregar(tabla3x3);
@@ -61,7 +61,10 @@ int main() {
 	
 	cout <<"abc"<< endl;
 
-	juego::jugadorVsCompuCer(veta);
+	//juego::jugadorVsCompuCer(veta);
+
+	controladora co;
+	co.control0();
 
 	return 0;
 }
