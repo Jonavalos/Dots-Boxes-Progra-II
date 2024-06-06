@@ -9,7 +9,7 @@ using namespace std;
 int main() {
 
 	tabla* tabla3x3 = new tabla_3x3();
-	//tabla* tabla3x4 = new tabla_3x4();
+	tabla* tabla3x4 = new tabla_3x4();
 	
 	//cout << *tabla3x4 << endl;
 	//tabla3x3->setLinea(0, 1);	//correcto
@@ -44,7 +44,7 @@ int main() {
 
 
 	vecTablas* veta = new vecTablas();
-	veta->agregar(tabla3x3);
+	veta->agregar(tabla3x4);
 	cout << *veta << endl;
 	cout << endl;
 	

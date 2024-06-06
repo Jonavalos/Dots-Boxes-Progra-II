@@ -133,14 +133,16 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 		if (tabla1->lleno()) break;
 		//después de que está lleno, para ver si se puede seguir jugando
 		jugada1 = new jugada(x, y);
-		vecPosLib->llenarCerca(tabla1, jugada1);
+		//vecPosLib->llenarCerca(tabla1, jugada1);
+		vecPosLib->llenar(tabla1);
 
+		// Compu
 		// Compu
 		cout << "Computadora: " << endl;
 		strat->runStrat(tabla1, *vecPosLib);
 		validar::completarLetras(tabla1, *jugador2);
 		cout << tabla1->toString() << endl;
-		vecPosLib->removeAll();
+		//vecPosLib->removeAll();
 	}
 
 	cout << *tabla1;

@@ -53,7 +53,22 @@ int vecPosicionesLibres::getCan() {
 	return _can;
 }
 
+bool vecPosicionesLibres::existe(int x, int y)
+{
+	if (_can != 0) {
+		for (int i = 0; i < _can; i++) {
+			if (_vec[i]->getFila() == x && _vec[i]->getCol() == y) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
 bool vecPosicionesLibres::add(int fila, int col) {
+	if (existe(fila, col)) {
+		return false;
+	}
 	posicionLibre* pos = new posicionLibre(fila, col);
 
 	if (_can < _tam) {

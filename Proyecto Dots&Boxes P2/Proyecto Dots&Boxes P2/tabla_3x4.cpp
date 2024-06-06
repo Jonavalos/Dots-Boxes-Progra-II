@@ -67,18 +67,18 @@ string tabla_3x4::toString() const {
 
 	//para los índices de la parte de arriba
 	s << setw(4) << "0";
-	for (int i = 0; i < 3; i++) {
-		s << setw(6) << i + 1;
+	for (int i = 0; i < 6; i++) {
+		s << setw(3) << i + 1;
 	}
 	s << endl << endl;
 
 	for (int i = 0; i < _filas; i++) {
-		if (i % 2 == 0) {
+		//if (i % 2 == 0) {
 			s << cont << "  "; cont++;
-		}
-		else {
-			s << "   ";
-		}
+		//}
+		//else {
+		//	s << "   ";
+		//}
 		for (int j = 0; j < _columnas; j++) {
 			s << _tabla[i][j] << "  ";
 		}
