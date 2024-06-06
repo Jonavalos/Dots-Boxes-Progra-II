@@ -7,6 +7,6 @@
 
 class estrategia {
 public:
-	virtual void strat(tabla* mat, vecPosicionesLibres& vec) = 0;
+	virtual bool strat(tabla* mat, vecPosicionesLibres& vec) = 0;
 
 };

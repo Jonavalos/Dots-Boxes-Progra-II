@@ -1,5 +1,5 @@
 #include "stratCentral.h"
 
-void stratCentral::strat(tabla* mat, vecPosicionesLibres& vec) {
-
+bool stratCentral::strat(tabla* mat, vecPosicionesLibres& vec) {
+	return false;
 }

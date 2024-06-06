@@ -3,6 +3,6 @@
 
 class stratIslas : public estrategia {
 public:
-	virtual void strat(tabla* mat, vecPosicionesLibres& vec);
+	virtual bool strat(tabla* mat, vecPosicionesLibres& vec);
 
 };
