@@ -117,7 +117,7 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 	cout << "Ingrese la posición de la tabla con la que desea jugar: "; cin >> op;
 	tabla* tabla1 = vec->getTabla(op);
 
-	strat->setStrat(perif);
+	strat->setStrat(cercano);
 	while (!tabla1->lleno()) {
 
 		// Jugador A
@@ -133,10 +133,9 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 		if (tabla1->lleno()) break;
 		//después de que está lleno, para ver si se puede seguir jugando
 		jugada1 = new jugada(x, y);
-		//vecPosLib->llenarCerca(tabla1, jugada1);
-		vecPosLib->llenar(tabla1);
+		vecPosLib->llenarCerca(tabla1, jugada1);
+		//vecPosLib->llenar(tabla1);
 
-		// Compu
 		// Compu
 		cout << "Computadora: " << endl;
 		strat->runStrat(tabla1, *vecPosLib);
