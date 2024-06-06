@@ -110,13 +110,14 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 	jugador* jugador2 = new jugador('B');
 	jugadorStrat* strat = new jugadorStrat();
 	estrategia* cercano = new stratCercano();
+	estrategia* perif = new stratPeriferico();
 	vecPosicionesLibres* vecPosLib = new vecPosicionesLibres;
 	jugada* jugada1 = nullptr;
 	cout << *vec << endl << endl;
 	cout << "Ingrese la posición de la tabla con la que desea jugar: "; cin >> op;
 	tabla* tabla1 = vec->getTabla(op);
 
-	strat->setStrat(cercano);
+	strat->setStrat(perif);
 	while (!tabla1->lleno()) {
 
 		// Jugador A
