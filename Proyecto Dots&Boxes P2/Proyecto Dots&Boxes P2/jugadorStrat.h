@@ -8,7 +8,7 @@ public:
 	jugadorStrat();
 
 	void setStrat(estrategia*);
-	void runStrat(tabla* mat, vecPosicionesLibres& vec);
+	bool runStrat(tabla* mat, vecPosicionesLibres& vec);
 
 private:
 	estrategia* _stratPtr;

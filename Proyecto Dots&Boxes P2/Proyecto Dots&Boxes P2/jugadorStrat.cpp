@@ -8,6 +8,9 @@ void jugadorStrat::setStrat(estrategia* obj) {
 	_stratPtr = obj;
 }
 
-void jugadorStrat::runStrat(tabla* mat, vecPosicionesLibres& vec) {
-	_stratPtr->strat(mat, vec);
+bool jugadorStrat::runStrat(tabla* mat, vecPosicionesLibres& vec) {
+	if (_stratPtr->strat(mat, vec)) {
+		return true;
+	}
+	return false;
 }

@@ -43,28 +43,31 @@ int main() {
 	
 
 
-	/*vecTablas* veta = new vecTablas();
+	vecTablas* veta = new vecTablas();
 	veta->agregar(tabla3x3);
 	cout << *veta << endl;
-	cout << endl;*/
+	cout << endl;
 	
 	/*tablaPrincipal* princial = new tablaPrincipal();
 	princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
 	princial->agregar(tabla3x4);
 	princial->actualizarTabBin2();
+	cout << "toString 3x3 con 3x4" << endl << endl;
 	cout << princial->toString() << endl;
 	princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
+	cout << "toString 3x3 con 3x4 con 3x3" << endl << endl;
 	cout << princial->toString() << endl;
 	cout << princial->toStringBin() << endl;*/
+
 	
 	cout <<"abc"<< endl;
 
-	//juego::jugadorVsCompuCer(veta);
+	juego::jugadorVsCompuCer(veta);
 
-	controladora co;
-	co.control0();
+	/*controladora co;
+	co.control0();*/
 
 	return 0;
 }

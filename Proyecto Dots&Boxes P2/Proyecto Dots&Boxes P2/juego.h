@@ -23,6 +23,8 @@ public:
 	static int menuVsCompu();
 	static void jugadorVsCompuAl(vecTablas* vec);
 	static void jugadorVsCompuCer(vecTablas* vec);
+	static void jugadorVsCompuCen(vecTablas* vec);
+	static void jugadorVsCompuPeri(vecTablas* vec);
 
 };
 

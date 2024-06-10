@@ -59,18 +59,18 @@ void controladora::control2_1() {
 	juego::jugadorVsCompuAl(_vec);
 }
 
-void controladora::control2_2()
-{
+void controladora::control2_2() {
+	juego::jugadorVsCompuCer(_vec);
 }
 
-void controladora::control2_3()
-{
+void controladora::control2_3() {
+	juego::jugadorVsCompuPeri(_vec);
 }
 
-void controladora::control2_4()
-{
+void controladora::control2_4() {
+	juego::jugadorVsCompuCen(_vec);
 }
 
-void controladora::control2_5()
-{
+void controladora::control2_5() {
+
 }

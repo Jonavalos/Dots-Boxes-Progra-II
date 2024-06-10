@@ -121,8 +121,9 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 	jugador* jugador1 = new jugador('A');
 	jugador* jugador2 = new jugador('B');
 	jugadorStrat* strat = new jugadorStrat();
+	jugadorStrat* stratAleat = new jugadorStrat();
 	estrategia* cercano = new stratCercano();
-	estrategia* perif = new stratPeriferico();
+	estrategia* aleatorio = new stratAleatorio();
 	vecPosicionesLibres* vecPosLib = new vecPosicionesLibres;
 	jugada* jugada1 = nullptr;
 	cout << *vec << endl << endl;
@@ -130,6 +131,7 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 	tabla* tabla1 = vec->getTabla(op);
 
 	strat->setStrat(cercano);
+	stratAleat->setStrat(aleatorio);
 	while (!tabla1->lleno()) {
 
 		// Jugador A
@@ -149,10 +151,95 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 
 		// Compu
 		cout << "Computadora: " << endl;
+		if (strat->runStrat(tabla1, *vecPosLib) == true) {
+			strat->runStrat(tabla1, *vecPosLib);
+		}
+		else if (strat->runStrat(tabla1, *vecPosLib) == false) {
+			stratAleat->runStrat(tabla1, *vecPosLib);
+		}
+		validar::completarLetras(tabla1, *jugador2);
+		cout << tabla1->toString() << endl;
+		//vecPosLib->removeAll();
+	}
+
+	cout << *tabla1;
+	cout << jugador1->toString() << endl;
+	cout << jugador2->toString() << endl;
+}
+
+void juego::jugadorVsCompuCen(vecTablas* vec) {
+	int op, x, y;
+	jugador* jugador1 = new jugador('A');
+	jugador* jugador2 = new jugador('B');
+	jugadorStrat* strat = new jugadorStrat();
+	estrategia* central = new stratCentral();
+	vecPosicionesLibres* vecPosLib = new vecPosicionesLibres;
+	cout << *vec << endl << endl;
+	cout << "Ingrese la posición de la tabla con la que desea jugar: "; cin >> op;
+	tabla* tabla1 = vec->getTabla(op);
+	vecPosLib->llenar(tabla1);
+
+	strat->setStrat(central);
+	while (!tabla1->lleno()) {
+
+		// Jugador A
+		do {
+			cout << tabla1->toString() << endl;
+			cout << "Jugador A: " << endl;
+			cout << "Fila: "; cin >> x;
+			cout << "Columna: "; cin >> y;
+		} while (!validar::isValidaParaLinea(x, y) || !validar::isLibre(tabla1, x, y));
+		tabla1->setLinea(x, y);
+		vecPosLib->remove(x, y);
+		validar::completarLetras(tabla1, *jugador1);
+		cout << tabla1->toString() << endl;
+		if (tabla1->lleno()) break;
+
+		// Compu
+		cout << "Computadora: " << endl;
 		strat->runStrat(tabla1, *vecPosLib);
 		validar::completarLetras(tabla1, *jugador2);
 		cout << tabla1->toString() << endl;
-		vecPosLib->removeAll();
+	}
+
+	cout << *tabla1;
+	cout << jugador1->toString() << endl;
+	cout << jugador2->toString() << endl;
+}
+
+void juego::jugadorVsCompuPeri(vecTablas* vec) {
+	int op, x, y;
+	jugador* jugador1 = new jugador('A');
+	jugador* jugador2 = new jugador('B');
+	jugadorStrat* strat = new jugadorStrat();
+	estrategia* periferico = new stratPeriferico();
+	vecPosicionesLibres* vecPosLib = new vecPosicionesLibres;
+	cout << *vec << endl << endl;
+	cout << "Ingrese la posición de la tabla con la que desea jugar: "; cin >> op;
+	tabla* tabla1 = vec->getTabla(op);
+	vecPosLib->llenar(tabla1);
+
+	strat->setStrat(periferico);
+	while (!tabla1->lleno()) {
+
+		// Jugador A
+		do {
+			cout << tabla1->toString() << endl;
+			cout << "Jugador A: " << endl;
+			cout << "Fila: "; cin >> x;
+			cout << "Columna: "; cin >> y;
+		} while (!validar::isValidaParaLinea(x, y) || !validar::isLibre(tabla1, x, y));
+		tabla1->setLinea(x, y);
+		vecPosLib->remove(x, y);
+		validar::completarLetras(tabla1, *jugador1);
+		cout << tabla1->toString() << endl;
+		if (tabla1->lleno()) break;
+
+		// Compu
+		cout << "Computadora: " << endl;
+		strat->runStrat(tabla1, *vecPosLib);
+		validar::completarLetras(tabla1, *jugador2);
+		cout << tabla1->toString() << endl;
 	}
 
 	cout << *tabla1;

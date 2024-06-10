@@ -6,6 +6,7 @@ bool stratCercano::strat(tabla* mat, vecPosicionesLibres& vec) {
 
 	if (vec.getPosLibre(x) != nullptr) {
 		mat->setLinea(vec.getPosLibre(x)->getFila(), vec.getPosLibre(x)->getCol());
+		vec.remove(vec.getPosLibre(x)->getFila(), vec.getPosLibre(x)->getCol());
 		return true;
 	}
 	return false;
