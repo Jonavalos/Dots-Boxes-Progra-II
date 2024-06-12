@@ -41,10 +41,13 @@ void juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP) {
 				cout << "No se pudo agregar la tabla. Intente nuevamente." << endl;
 			}
 		}
+		else if (op == -1) {
+			break;
+		}
 		else {
 			cout << "Posición inválida. Intente nuevamente." << endl;
 		}
-	} while (op >= vec->getCan() && op <= 0 && (!(tablaP->agregar(vec->getTabla(op)))));
+	} while (/*op >= vec->getCan() && op <= 0 && (!(tablaP->agregar(vec->getTabla(op))))*/true);
 
 	cout << tablaP->toString() << endl;
 }
