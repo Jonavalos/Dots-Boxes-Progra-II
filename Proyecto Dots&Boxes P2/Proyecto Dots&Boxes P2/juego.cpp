@@ -26,7 +26,7 @@ int juego::menuTablero() {
 
 void juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP) {
 	int op;
-
+	
 	cout << "\tCreacion del tablero irregular" << endl << endl;
 	do {
 		cout << vec->toString() << endl;
@@ -36,18 +36,17 @@ void juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP) {
 			if (tablaP->agregar(vec->getTabla(op))) {
 				cout << "Tabla agregada correctamente." << endl;
 				tablaP->actualizarTabBin2();
+				
 			}
 			else {
-				cout << "No se pudo agregar la tabla. Intente nuevamente." << endl;
+				cout << "No se pudo agregar la tabla. Intente nuevamente." << endl;			
+				break;
 			}
-		}
-		else if (op == -1) {
-			break;
 		}
 		else {
 			cout << "Posición inválida. Intente nuevamente." << endl;
 		}
-	} while (/*op >= vec->getCan() && op <= 0 && (!(tablaP->agregar(vec->getTabla(op))))*/true);
+	} while (op <= vec->getCan() || op >= 0);
 
 	cout << tablaP->toString() << endl;
 }
