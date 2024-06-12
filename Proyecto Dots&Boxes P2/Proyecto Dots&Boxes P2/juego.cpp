@@ -43,7 +43,7 @@ void juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP) {
 				break;
 			}
 		}
-		else {
+		else {//a
 			cout << "Posición inválida. Intente nuevamente." << endl;
 		}
 	} while (op <= vec->getCan() || op >= 0);
