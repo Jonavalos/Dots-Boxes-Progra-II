@@ -55,6 +55,7 @@ bool tablaPrincipal::agregar(tabla* tab)
 					}
 				}
 			}
+			return true;
 		}
 		if (dynamic_cast<tabla_3x4*>(tab)) {
 			for (int i = 0; i < 9; i++) {
@@ -70,9 +71,23 @@ bool tablaPrincipal::agregar(tabla* tab)
 					}
 				}
 			}
+			return true;
 		}
 		if (dynamic_cast<tabla_3x5*>(tab)) {
-
+			for (int i = 0; i < 11; i++) {
+				for (int j = 0; j < 7; j++) {
+					_tabla[i][j] = char('+');
+					if (j % 2 != 0) {
+						_tabla[i][j] = char(' ');
+						_tablaBin[i][j] = 1;
+					}
+					if (i % 2 != 0) {
+						_tabla[i][j] = char(' ');
+						_tablaBin[i][j] = 1;
+					}
+				}
+			}
+			return true;
 		}
 	}
 	if (dynamic_cast<tabla_3x3*>(tab)) {

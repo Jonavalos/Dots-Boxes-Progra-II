@@ -46,8 +46,8 @@ int main() {
 	vecTablas* veta = new vecTablas();
 	veta->agregar(tabla3x3);
 	veta->agregar(tabla3x4);
-	cout << *veta << endl;
-	cout << endl;
+	//cout << *veta << endl;
+	//cout << endl;
 	
 	tablaPrincipal* princial = new tablaPrincipal();
 	/*princial->agregar(tabla3x3);
