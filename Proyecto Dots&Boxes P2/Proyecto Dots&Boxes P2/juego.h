@@ -12,12 +12,14 @@
 #include "stratPeriferico.h"
 #include "ansi_term.h"
 #include "jugada.h"
+#include "tablaPrincipal.h"
 
 class juego {
 public:
 
 	static int menuJuego();
 	static int menuTablero();
+	static void crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP);
 	static void jugadorVsJugador(vecTablas* vec);
 
 	static int menuVsCompu();

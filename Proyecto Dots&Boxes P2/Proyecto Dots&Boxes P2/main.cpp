@@ -45,11 +45,12 @@ int main() {
 
 	vecTablas* veta = new vecTablas();
 	veta->agregar(tabla3x3);
+	veta->agregar(tabla3x4);
 	cout << *veta << endl;
 	cout << endl;
 	
-	/*tablaPrincipal* princial = new tablaPrincipal();
-	princial->agregar(tabla3x3);
+	tablaPrincipal* princial = new tablaPrincipal();
+	/*princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
 	princial->agregar(tabla3x4);
 	princial->actualizarTabBin2();
@@ -61,10 +62,11 @@ int main() {
 	cout << princial->toString() << endl;
 	cout << princial->toStringBin() << endl;*/
 
+	juego::crearTableroIrregular(veta, princial);
 	
 	cout <<"abc"<< endl;
 
-	juego::jugadorVsCompuCer(veta);
+	/*juego::jugadorVsCompuCer(veta);*/
 
 	/*controladora co;
 	co.control0();*/

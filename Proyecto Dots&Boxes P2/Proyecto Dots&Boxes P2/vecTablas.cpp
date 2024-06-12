@@ -29,6 +29,11 @@ tabla* vecTablas::getTabla(int pos) {
 	return nullptr;
 }
 
+int vecTablas::getCan()
+{
+	return can;
+}
+
 string vecTablas::toString() const
 {
 	stringstream s;
