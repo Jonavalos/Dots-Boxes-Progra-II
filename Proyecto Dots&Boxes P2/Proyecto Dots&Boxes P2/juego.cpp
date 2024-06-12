@@ -39,7 +39,7 @@ void juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP) {
 				
 			}
 			else {
-				cout << "No se pudo agregar la tabla. Intente nuevamente." << endl;			
+				cout << "No hay mas espacio." << endl;			
 				break;
 			}
 		}
