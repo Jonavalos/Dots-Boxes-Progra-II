@@ -58,14 +58,20 @@ int main() {
 	cout << princial->toString() << endl;*/
 	princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
-	cout << "toString 3x3 con 3x4 con 3x3" << endl << endl;
-	princial->agregar(tabla3x3);
+	/*cout << "toString 3x3 con 3x4 con 3x3" << endl << endl;*/
+	/*princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
 	princial->agregar(tabla3x3);
-	princial->actualizarTabBin2();
+	princial->actualizarTabBin2();*/
 	cout << princial->toString() << endl;
 	cout << princial->toStringBin() << endl;
 
+	princial->setLinea(0, 1);
+	princial->actualizarTabBin2();
+	princial->setLinea(0, 3);
+	princial->actualizarTabBin2();
+	cout << princial->toString() << endl;
+	cout << princial->toStringBin() << endl;
 
 	/*juego::jugadorVsCompuCer(veta);*/
 

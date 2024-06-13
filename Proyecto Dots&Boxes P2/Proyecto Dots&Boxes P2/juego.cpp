@@ -56,8 +56,7 @@ tablaPrincipal* juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tab
 //	jugador* jugador1 = new jugador('A');
 //	jugador* jugador2 = new jugador('B');
 //
-//	crearTableroIrregular(vec, princi);
-//	tabla* tabla1 = vec->getTabla(op);
+//	tablaPrincipal* tabla1 = crearTableroIrregular(vec, princi);
 //
 //	while (!tabla1->lleno()) {
 //		// Jugador A

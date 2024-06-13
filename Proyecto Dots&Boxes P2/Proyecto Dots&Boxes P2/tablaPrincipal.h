@@ -16,9 +16,8 @@ public:
 	tablaPrincipal();
 	virtual ~tablaPrincipal();
 	bool agregar(tabla* tab);
-	//bool setLinea(int, int);
-	int getCantCol();
-	int getCantFil();
+	bool setLinea(int, int);
+	bool validarLinea(int i, int j);
 	string toString();
 
 	//
