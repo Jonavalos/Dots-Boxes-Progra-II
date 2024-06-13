@@ -70,6 +70,8 @@ int main() {
 	princial->actualizarTabBin2();
 	princial->setLinea(0, 3);
 	princial->actualizarTabBin2();
+	princial->setLinea(0, 11);
+	princial->actualizarTabBin2();
 	cout << princial->toString() << endl;
 	cout << princial->toStringBin() << endl;
 
