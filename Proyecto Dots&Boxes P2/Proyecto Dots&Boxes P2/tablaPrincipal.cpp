@@ -172,6 +172,36 @@ bool tablaPrincipal::agregar(tabla* tab)
 	return false;
 }
 
+int tablaPrincipal::getCantCol() {
+	int cant = 0;
+
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 0; j < _columnas; j++) {
+			if (_tablaBin2[i][j] == 0) {
+				cant++;
+			}
+		}
+		return cant;
+	}
+
+	return cant;
+}
+
+int tablaPrincipal::getCantFil() {
+	return 0;
+}
+
+//bool tablaPrincipal::setLinea(int x, int y) {
+//	if (!validar::isFueraLimites(this, fila, col) && validar::isLibre(this, fila, col)) {
+//		if (fila % 2 == 0 && col % 2 != 0) {
+//			_tabla[fila][col] = char('-');
+//		}
+//		if (fila % 2 != 0 && col % 2 == 0) {
+//			_tabla[fila][col] = char('|');
+//		}
+//	}
+//}
+
 string tablaPrincipal::toString()
 {
 	stringstream s;

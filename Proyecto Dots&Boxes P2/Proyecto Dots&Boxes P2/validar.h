@@ -7,6 +7,7 @@ class tabla_3x4;
 class tabla_3x5;
 class jugador;
 class jugada;
+class tablaPrincipal;
 
 class validar
 {
@@ -16,6 +17,8 @@ public:
 	static bool isValidaParaLinea(int fil, int col);
 
 	static bool isFueraLimites(tabla* mat, int fil, int col);
+
+	static bool isFueraLimitesPrincipal(tablaPrincipal* mat, int fil, int col);
 
 	static bool isCasillaRodeada(tabla* mat, int fil, int col);
 

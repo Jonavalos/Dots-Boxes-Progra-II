@@ -19,7 +19,8 @@ public:
 
 	static int menuJuego();
 	static int menuTablero();
-	static void crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP);
+	static tablaPrincipal* crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP);
+	//static void jugVsJugIrregular(vecTablas*, tablaPrincipal*);
 	static void jugadorVsJugador(vecTablas* vec);
 
 	static int menuVsCompu();

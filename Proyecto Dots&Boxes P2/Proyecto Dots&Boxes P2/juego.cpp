@@ -24,7 +24,7 @@ int juego::menuTablero() {
 	return op;
 }
 
-void juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP) {
+tablaPrincipal* juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP) {
 	int op;
 	
 	cout << "\tCreacion del tablero irregular" << endl << endl;
@@ -43,13 +43,49 @@ void juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP) {
 				break;
 			}
 		}
-		else {//a
+		else {
 			cout << "Posición inválida. Intente nuevamente." << endl;
 		}
 	} while (op <= vec->getCan() || op >= 0);
 
-	cout << tablaP->toString() << endl;
+	return tablaP;
 }
+
+//void juego::jugVsJugIrregular(vecTablas* vec, tablaPrincipal* princi) {
+//	int op, x, y;
+//	jugador* jugador1 = new jugador('A');
+//	jugador* jugador2 = new jugador('B');
+//
+//	crearTableroIrregular(vec, princi);
+//	tabla* tabla1 = vec->getTabla(op);
+//
+//	while (!tabla1->lleno()) {
+//		// Jugador A
+//		do {
+//			cout << tabla1->toString() << endl;
+//			cout << "Jugador A: " << endl;
+//			cout << "Fila: "; cin >> x;
+//			cout << "Columna: "; cin >> y;
+//		} while (!validar::isLibre(tabla1, x, y));
+//		tabla1->setLinea(x, y);
+//		validar::completarLetras(tabla1, *jugador1); //AQUI VA CUANDO SE PUEDA
+//		if (tabla1->lleno()) break;
+//
+//		// Jugador B
+//		do {
+//			cout << tabla1->toString() << endl;
+//			cout << "Jugador B: " << endl;
+//			cout << "Fila: "; cin >> x;
+//			cout << "Columna: "; cin >> y;
+//		} while (!validar::isLibre(tabla1, x, y));
+//		tabla1->setLinea(x, y);
+//		validar::completarLetras(tabla1, *jugador2); //AQUI VA CUANDO SE PUEDA
+//	}
+//
+//	cout << *tabla1;
+//	cout << jugador1->toString() << endl;
+//	cout << jugador2->toString() << endl;
+//}
 
 void juego::jugadorVsJugador(vecTablas* vec) {
 	int op, x, y;
