@@ -65,9 +65,9 @@ tablaPrincipal* juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tab
 //			cout << "Jugador A: " << endl;
 //			cout << "Fila: "; cin >> x;
 //			cout << "Columna: "; cin >> y;
-//		} while (!validar::isLibre(tabla1, x, y));
+//		} while (!tabla1->isLibreBin2(x, y));
 //		tabla1->setLinea(x, y);
-//		validar::completarLetras(tabla1, *jugador1); //AQUI VA CUANDO SE PUEDA
+//		tabla1->completarLetras(jugador1);
 //		if (tabla1->lleno()) break;
 //
 //		// Jugador B
@@ -76,12 +76,12 @@ tablaPrincipal* juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tab
 //			cout << "Jugador B: " << endl;
 //			cout << "Fila: "; cin >> x;
 //			cout << "Columna: "; cin >> y;
-//		} while (!validar::isLibre(tabla1, x, y));
+//		} while (!tabla1->isLibreBin2(x, y));
 //		tabla1->setLinea(x, y);
-//		validar::completarLetras(tabla1, *jugador2); //AQUI VA CUANDO SE PUEDA
+//		tabla1->completarLetras(jugador1);
 //	}
 //
-//	cout << *tabla1;
+//	cout << tabla1->toString();
 //	cout << jugador1->toString() << endl;
 //	cout << jugador2->toString() << endl;
 //}

@@ -203,6 +203,41 @@ bool tablaPrincipal::validarLinea(int i, int j) {
 	}
 }
 
+bool tablaPrincipal::lleno() {
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 0; j < _columnas; j++) {
+			if (_tabla[i][j] == 32 && _tablaBin2[i][j] == 1) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
+bool tablaPrincipal::completarLetras(jugador* p) {
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 1; j < _columnas; j++) {
+			if (_tablaBin2[i - 1][j] == 0 && _tablaBin2[i][j - 1] == 0 && _tablaBin2[i][j + 1] == 0 && _tablaBin2[i + 1][j] == 0) {
+				if (isLibreBin2(i, j)) {		//setLetra
+					_tabla[i][j] = p->getUsuario();
+					p->sumarPuntos();
+				}
+			}
+		}
+	}
+	return true;
+}
+
+bool tablaPrincipal::isLibreBin2(int fil, int col) {
+	if (_tablaBin2[fil][col] == 1) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 string tablaPrincipal::toString()
 {
 	stringstream s;

@@ -50,20 +50,20 @@ int main() {
 	//cout << endl;
 	
 	tablaPrincipal* princial = new tablaPrincipal();
-	princial->agregar(tabla3x3);
-	princial->actualizarTabBin2();
+	/*princial->agregar(tabla3x3);
+	princial->actualizarTabBin2();*/
 	/*princial->agregar(tabla3x4);
 	princial->actualizarTabBin2();*/
 	/*cout << "toString 3x3 con 3x4" << endl << endl;
 	cout << princial->toString() << endl;*/
-	princial->agregar(tabla3x3);
-	princial->actualizarTabBin2();
+	/*princial->agregar(tabla3x3);
+	princial->actualizarTabBin2();*/
 	/*cout << "toString 3x3 con 3x4 con 3x3" << endl << endl;*/
 	/*princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();
 	princial->agregar(tabla3x3);
 	princial->actualizarTabBin2();*/
-	cout << princial->toString() << endl;
+	/*cout << princial->toString() << endl;
 	cout << princial->toStringBin() << endl;
 
 	princial->setLinea(0, 1);
@@ -75,7 +75,14 @@ int main() {
 	cout << princial->toString() << endl;
 	cout << princial->toStringBin() << endl;
 
-	/*juego::jugadorVsCompuCer(veta);*/
+	if (princial->lleno()) {
+		cout << "Sos un mamador" << endl;
+	}
+	else {
+		cout << "Exito" << endl;
+	}*/
+
+	//juego::jugVsJugIrregular(veta, princial);
 
 	/*controladora co;
 	co.control0();*/

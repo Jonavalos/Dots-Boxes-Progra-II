@@ -4,6 +4,7 @@
 #include "tabla_3x3.h"
 #include "tabla_3x4.h"
 #include "tabla_3x5.h"
+#include "jugador.h"
 class tablaPrincipal
 {
 private:
@@ -18,6 +19,9 @@ public:
 	bool agregar(tabla* tab);
 	bool setLinea(int, int);
 	bool validarLinea(int i, int j);
+	bool lleno();
+	bool completarLetras(jugador*);
+	bool isLibreBin2(int, int);
 	string toString();
 
 	//
