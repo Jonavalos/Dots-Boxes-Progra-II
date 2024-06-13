@@ -69,10 +69,6 @@ bool validar::isFueraLimites(tabla* mat, int fil, int col)
 	return true;
 }
 
-bool validar::isFueraLimitesPrincipal(tablaPrincipal* mat, int fil, int col) {
-	return false;
-}
-
 bool validar::isCasillaRodeada(tabla* mat, int i, int j)
 {
 	if (!validar::isFueraLimites(mat, i - 1, j) && !validar::isLibre(mat, i - 1, j) && //arriba

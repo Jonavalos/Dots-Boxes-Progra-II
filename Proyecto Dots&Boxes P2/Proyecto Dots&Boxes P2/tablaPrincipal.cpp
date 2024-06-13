@@ -218,9 +218,8 @@ bool tablaPrincipal::lleno() {
 bool tablaPrincipal::completarLetras(jugador* p) {
 	for (int i = 0; i < _filas; i++) {
 		for (int j = 1; j < _columnas; j++) {
-			if (_tablaBin2[i - 1][j] == 0 && _tablaBin2[i][j - 1] == 0 && _tablaBin2[i][j + 1] == 0 && _tablaBin2[i + 1][j] == 0) {
-				if (isLibreBin2(i, j)) {		//setLetra
-					_tabla[i][j] = p->getUsuario();
+			if (isCasillaRodeada(i, j)) {
+				if (setLetra(i, j, p->getUsuario())) {
 					p->sumarPuntos();
 				}
 			}
@@ -229,13 +228,33 @@ bool tablaPrincipal::completarLetras(jugador* p) {
 	return true;
 }
 
-bool tablaPrincipal::isLibreBin2(int fil, int col) {
-	if (_tablaBin2[fil][col] == 1) {
-		return true;
-	}
-	else {
+bool tablaPrincipal::isLibre(int fil, int col) {
+	
+	if (_tabla[fil][col] == '-' || _tabla[fil][col] == '|' || _tabla[fil][col] == '+') {
 		return false;
 	}
+	if (_tabla[fil][col] == 'A' || _tabla[fil][col] == 'B') {
+		return false;
+	}
+	if (_tabla[fil][col] == 32) {
+		return true;
+	}
+	return false;
+}
+
+bool tablaPrincipal::isCasillaRodeada(int i, int j) {
+	if ((!isLibre(i - 1, j)) && (!isLibre(i, j - 1)) && (!isLibre(i, j + 1)) && (!isLibre(i + 1, j))) {
+		return true;
+	}
+	return false;
+}
+
+bool tablaPrincipal::setLetra(int fil, int col, char letra) {
+	if (isLibre(fil, col)) {
+		_tabla[fil][col] = letra;
+		return true;
+	}
+	return false;
 }
 
 string tablaPrincipal::toString()

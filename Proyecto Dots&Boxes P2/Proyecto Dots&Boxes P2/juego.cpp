@@ -51,40 +51,40 @@ tablaPrincipal* juego::crearTableroIrregular(vecTablas* vec, tablaPrincipal* tab
 	return tablaP;
 }
 
-//void juego::jugVsJugIrregular(vecTablas* vec, tablaPrincipal* princi) {
-//	int op, x, y;
-//	jugador* jugador1 = new jugador('A');
-//	jugador* jugador2 = new jugador('B');
-//
-//	tablaPrincipal* tabla1 = crearTableroIrregular(vec, princi);
-//
-//	while (!tabla1->lleno()) {
-//		// Jugador A
-//		do {
-//			cout << tabla1->toString() << endl;
-//			cout << "Jugador A: " << endl;
-//			cout << "Fila: "; cin >> x;
-//			cout << "Columna: "; cin >> y;
-//		} while (!tabla1->isLibreBin2(x, y));
-//		tabla1->setLinea(x, y);
-//		tabla1->completarLetras(jugador1);
-//		if (tabla1->lleno()) break;
-//
-//		// Jugador B
-//		do {
-//			cout << tabla1->toString() << endl;
-//			cout << "Jugador B: " << endl;
-//			cout << "Fila: "; cin >> x;
-//			cout << "Columna: "; cin >> y;
-//		} while (!tabla1->isLibreBin2(x, y));
-//		tabla1->setLinea(x, y);
-//		tabla1->completarLetras(jugador1);
-//	}
-//
-//	cout << tabla1->toString();
-//	cout << jugador1->toString() << endl;
-//	cout << jugador2->toString() << endl;
-//}
+void juego::jugVsJugIrregular(vecTablas* vec, tablaPrincipal* princi) {
+	int x, y;
+	jugador* jugador1 = new jugador('A');
+	jugador* jugador2 = new jugador('B');
+
+	tablaPrincipal* tabla1 = crearTableroIrregular(vec, princi);
+
+	while (!tabla1->lleno()) {
+		// Jugador A
+		do {
+			cout << tabla1->toString() << endl;
+			cout << "Jugador A: " << endl;
+			cout << "Fila: "; cin >> x;
+			cout << "Columna: "; cin >> y;
+		} while (!tabla1->isLibre(x, y));
+		tabla1->setLinea(x, y);
+		tabla1->completarLetras(jugador1);
+		if (tabla1->lleno()) break;
+
+		// Jugador B
+		do {
+			cout << tabla1->toString() << endl;
+			cout << "Jugador B: " << endl;
+			cout << "Fila: "; cin >> x;
+			cout << "Columna: "; cin >> y;
+		} while (!tabla1->isLibre(x, y));
+		tabla1->setLinea(x, y);
+		tabla1->completarLetras(jugador2);
+	}
+
+	cout << tabla1->toString();
+	cout << jugador1->toString() << endl;
+	cout << jugador2->toString() << endl;
+}
 
 void juego::jugadorVsJugador(vecTablas* vec) {
 	int op, x, y;

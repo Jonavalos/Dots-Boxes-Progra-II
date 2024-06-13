@@ -1,3 +1,13 @@
+/* -------------------------------------------------------------------+
+* |
+* (c) 2024 |
+* 1-1921-0044 - JiaYu Wu Liang |
+* 1-1892-0119 - Jonathan Avalos Montero |
+* version 1.0.0 2024-06-13 |
+* |
+* -------------------------------------------------------------------+
+*/
+
 #pragma once
 #include "bibliotecas.h"
 #include "tabla_3x3.h"
@@ -20,7 +30,7 @@ public:
 	static int menuJuego();
 	static int menuTablero();
 	static tablaPrincipal* crearTableroIrregular(vecTablas* vec, tablaPrincipal* tablaP);
-	//static void jugVsJugIrregular(vecTablas*, tablaPrincipal*);
+	static void jugVsJugIrregular(vecTablas*, tablaPrincipal*);
 	static void jugadorVsJugador(vecTablas* vec);
 
 	static int menuVsCompu();
