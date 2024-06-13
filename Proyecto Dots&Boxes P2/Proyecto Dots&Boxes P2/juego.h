@@ -28,6 +28,7 @@ public:
 	static void jugadorVsCompuCer(vecTablas* vec);
 	static void jugadorVsCompuCen(vecTablas* vec);
 	static void jugadorVsCompuPeri(vecTablas* vec);
+	static void jugadorVsCompuIslas(vecTablas* vec);
 
 };
 
