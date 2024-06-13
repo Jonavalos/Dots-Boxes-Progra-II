@@ -131,6 +131,7 @@
     <ClCompile Include="baseObj.cpp" />
     <ClCompile Include="controladora.cpp" />
     <ClCompile Include="estrategia.cpp" />
+    <ClCompile Include="excepcion.cpp" />
     <ClCompile Include="iteradorVecTablas.cpp" />
     <ClCompile Include="juego.cpp" />
     <ClCompile Include="jugada.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="bibliotecas.h" />
     <ClInclude Include="controladora.h" />
     <ClInclude Include="estrategia.h" />
+    <ClInclude Include="excepcion.h" />
     <ClInclude Include="iteradorVecTablas.h" />
     <ClInclude Include="juego.h" />
     <ClInclude Include="jugada.h" />
