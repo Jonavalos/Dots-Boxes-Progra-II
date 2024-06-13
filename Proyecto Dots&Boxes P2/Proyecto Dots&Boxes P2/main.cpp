@@ -77,7 +77,7 @@ int main() {
 
 	/*controladora co;
 	co.control0();*/
-
+	//eoeoeo
 	return 0;
 }
 /*
