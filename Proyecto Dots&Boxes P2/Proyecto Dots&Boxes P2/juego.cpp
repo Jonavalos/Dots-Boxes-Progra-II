@@ -57,6 +57,9 @@ void juego::jugVsJugIrregular(vecTablas* vec, tablaPrincipal* princi) {
 	jugador* jugador2 = new jugador('B');
 
 	tablaPrincipal* tabla1 = crearTableroIrregular(vec, princi);
+	cout << princi->toString() << endl;
+	cout << princi->toStringBin() << endl;
+	cout << princi->toStringBin2() << endl;
 
 	while (!tabla1->lleno()) {
 		// Jugador A
@@ -67,7 +70,9 @@ void juego::jugVsJugIrregular(vecTablas* vec, tablaPrincipal* princi) {
 			cout << "Columna: "; cin >> y;
 		} while (!tabla1->isLibre(x, y));
 		tabla1->setLinea(x, y);
+		princi->actualizarTabBin2();
 		tabla1->completarLetras(jugador1);
+		princi->actualizarTabBin2();
 		if (tabla1->lleno()) break;
 
 		// Jugador B
@@ -78,7 +83,9 @@ void juego::jugVsJugIrregular(vecTablas* vec, tablaPrincipal* princi) {
 			cout << "Columna: "; cin >> y;
 		} while (!tabla1->isLibre(x, y));
 		tabla1->setLinea(x, y);
+		princi->actualizarTabBin2();
 		tabla1->completarLetras(jugador2);
+		princi->actualizarTabBin2();
 	}
 
 	cout << tabla1->toString();

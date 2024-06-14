@@ -173,7 +173,7 @@ bool tablaPrincipal::agregar(tabla* tab)
 }
 
 bool tablaPrincipal::setLinea(int fila, int col) {
-	if (validarLinea(fila, col)) {
+	if (isLibre(fila, col)) {
 		if (fila % 2 == 0 && col % 2 != 0) {
 			_tabla[fila][col] = char('-');
 			return true;
@@ -230,7 +230,7 @@ bool tablaPrincipal::completarLetras(jugador* p) {
 
 bool tablaPrincipal::isLibre(int fil, int col) {
 	
-	if (_tabla[fil][col] == '-' || _tabla[fil][col] == '|' || _tabla[fil][col] == '+') {
+	if ((_tabla[fil][col] == '-') || (_tabla[fil][col] == '|') || (_tabla[fil][col] == '+')) {
 		return false;
 	}
 	if (_tabla[fil][col] == 'A' || _tabla[fil][col] == 'B') {
@@ -240,11 +240,20 @@ bool tablaPrincipal::isLibre(int fil, int col) {
 		return true;
 	}
 	return false;
+
+	/*if (_tablaBin2[fil][col] == true && _tablaBin[fil][col] != false) {
+		return true;
+	}
+	else {
+		return false;
+	}*/
 }
 
 bool tablaPrincipal::isCasillaRodeada(int i, int j) {
-	if ((!isLibre(i - 1, j)) && (!isLibre(i, j - 1)) && (!isLibre(i, j + 1)) && (!isLibre(i + 1, j))) {
-		return true;
+	if (isFueraLimites(i, j)) {
+		if ((!isLibre(i - 1, j)) && (!isLibre(i, j - 1)) && (!isLibre(i, j + 1)) && (!isLibre(i + 1, j))) {
+			return true;
+		}
 	}
 	return false;
 }
@@ -255,6 +264,13 @@ bool tablaPrincipal::setLetra(int fil, int col, char letra) {
 		return true;
 	}
 	return false;
+}
+
+bool tablaPrincipal::isFueraLimites(int fil, int col) {
+	if (_tablaBin[fil][col] == 0) {
+		return false;
+	}
+	return true;
 }
 
 string tablaPrincipal::toString()
@@ -312,6 +328,17 @@ bool tablaPrincipal::isLibreBin2(int x, int y, int f, int c)
 
 string tablaPrincipal::toStringBin()
 {
+	stringstream s;
+	for (int i = 0; i < _filas; i++) {
+		for (int j = 0; j < _columnas; j++) {
+			s << _tablaBin[i][j] << "   ";
+		}
+		s << '\n';
+	}
+	return s.str();
+}
+
+string tablaPrincipal::toStringBin2() {
 	stringstream s;
 	for (int i = 0; i < _filas; i++) {
 		for (int j = 0; j < _columnas; j++) {

@@ -132,6 +132,9 @@ bool validar::isCerca(jugada* ultimaJugada, int i,  int j) {
 		if ((j - ultimaJugada->getCol() <= 1 && j - ultimaJugada->getCol() >= 0) || (ultimaJugada->getCol() - j <= 1 && ultimaJugada->getCol() - j >= 0)) {
 			return true;
 		}
+		else {
+			return false;
+		}
 	}
 	else {
 		return false;

@@ -34,6 +34,7 @@ public:
 	bool isLibre(int, int);
 	bool isCasillaRodeada(int, int);
 	bool setLetra(int, int, char);
+	bool isFueraLimites(int, int);
 	string toString();
 
 	//
@@ -41,5 +42,6 @@ public:
 	virtual void actualizarTabBin2();
 	bool isLibreBin2(int x, int y, int f, int c);
 	virtual string toStringBin();
+	virtual string toStringBin2();
 
 };

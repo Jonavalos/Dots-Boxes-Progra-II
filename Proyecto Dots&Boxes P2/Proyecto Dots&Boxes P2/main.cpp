@@ -51,8 +51,8 @@ int main() {
 	
 	tablaPrincipal* princial = new tablaPrincipal();
 	/*princial->agregar(tabla3x3);
-	princial->actualizarTabBin2();*/
-	/*princial->agregar(tabla3x4);
+	princial->actualizarTabBin2();
+	princial->agregar(tabla3x4);
 	princial->actualizarTabBin2();*/
 	/*cout << "toString 3x3 con 3x4" << endl << endl;
 	cout << princial->toString() << endl;*/
@@ -71,7 +71,10 @@ int main() {
 	princial->setLinea(0, 3);
 	princial->actualizarTabBin2();
 	cout << princial->toString() << endl;
-	cout << princial->toStringBin() << endl;*/
+	cout << "toStringBin" << endl << endl;
+	cout << princial->toStringBin() << endl;
+	cout << "toStringBin2" << endl << endl;
+	cout << princial->toStringBin2() << endl;*/
 
 	juego::jugVsJugIrregular(veta, princial);
 
