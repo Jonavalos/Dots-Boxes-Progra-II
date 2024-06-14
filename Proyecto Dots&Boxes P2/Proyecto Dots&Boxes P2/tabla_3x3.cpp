@@ -1,5 +1,5 @@
 #include "tabla_3x3.h"
-
+#include "excepcion.h"
 tabla_3x3::tabla_3x3() {
 	_filas = 7;
 	_columnas = 7;
@@ -138,9 +138,6 @@ char tabla_3x3::getValor(int f, int c)
 {
 	if (!validar::isFueraLimites(this, f, c)) {
 		return _tabla[f][c];
-	}
-	else {
-		throw new exception;
 	}
 	
 }

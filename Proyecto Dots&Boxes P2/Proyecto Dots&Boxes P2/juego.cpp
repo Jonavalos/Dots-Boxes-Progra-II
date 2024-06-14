@@ -109,11 +109,11 @@ void juego::jugadorVsJugador(vecTablas* vec) {
 			cout << "Jugador A: " << endl;
 			try {
 				cout << "Fila: "; cin >> x;
-				if (x < 0 && x > tabla1->getFila()) {
+				if (x < 0 || x > tabla1->getFila()) {
 					throw excepcionFueraLimites();
 				}
 				cout << "Columna: "; cin >> y;
-				if (y < 0 && y > 7) {
+				if (y < 0 || y > 7) {
 					throw excepcionFueraLimites();
 				}
 				if (!validar::isValidaParaLinea(x, y)) {
@@ -200,11 +200,11 @@ void juego::jugadorVsCompuAl(vecTablas* vec) {
 			cout << "Jugador A: " << endl;
 			try {
 				cout << "Fila: "; cin >> x;
-				if (x < 0 && x > tabla1->getFila()) {
+				if (x < 0 || x > tabla1->getFila()) {
 					throw excepcionFueraLimites();
 				}
 				cout << "Columna: "; cin >> y;
-				if (y < 0 && y > 7) {
+				if (y < 0 || y >= 7) {
 					throw excepcionFueraLimites();
 				}
 				if (!validar::isValidaParaLinea(x, y)) {
@@ -260,11 +260,11 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 			cout << "Jugador A: " << endl;
 			try {
 				cout << "Fila: "; cin >> x;
-				if (x < 0 && x > tabla1->getFila()) {
+				if (x < 0 || x > tabla1->getFila()) {
 					throw excepcionFueraLimites();
 				}
 				cout << "Columna: "; cin >> y;
-				if (y < 0 && y > 7) {
+				if (y < 0 || y >= 7) {
 					throw excepcionFueraLimites();
 				}
 				if (!validar::isValidaParaLinea(x, y)) {
@@ -325,11 +325,11 @@ void juego::jugadorVsCompuCen(vecTablas* vec) {
 			cout << "Jugador A: " << endl;
 			try {
 				cout << "Fila: "; cin >> x;
-				if (x < 0 && x > tabla1->getFila()) {
+				if (x < 0 || x > tabla1->getFila()) {
 					throw excepcionFueraLimites();
 				}
 				cout << "Columna: "; cin >> y;
-				if (y < 0 && y > 7) {
+				if (y < 0 || y >= 7) {
 					throw excepcionFueraLimites();
 				}
 				if (!validar::isValidaParaLinea(x, y)) {
@@ -382,11 +382,11 @@ void juego::jugadorVsCompuPeri(vecTablas* vec) {
 			cout << "Jugador A: " << endl;
 			try {
 				cout << "Fila: "; cin >> x;
-				if (x < 0 && x > tabla1->getFila()) {
+				if (x < 0 || x > tabla1->getFila()) {
 					throw excepcionFueraLimites();
 				}
 				cout << "Columna: "; cin >> y;
-				if (y < 0 && y > 7) {
+				if (y < 0 || y >= 7) {
 					throw excepcionFueraLimites();
 				}
 				if (!validar::isValidaParaLinea(x, y)) {
@@ -440,11 +440,11 @@ void juego::jugadorVsCompuIslas(vecTablas* vec)
 			cout << "Jugador A: " << endl;
 			try {
 				cout << "Fila: "; cin >> x;
-				if (x < 0 && x > tabla1->getFila()) {
+				if (x < 0 || x > tabla1->getFila()) {
 					throw excepcionFueraLimites();
 				}
 				cout << "Columna: "; cin >> y;
-				if (y < 0 && y > 7) {
+				if (y < 0 || y >= 7) {
 					throw excepcionFueraLimites();
 				}
 				if (!validar::isValidaParaLinea(x, y)) {
