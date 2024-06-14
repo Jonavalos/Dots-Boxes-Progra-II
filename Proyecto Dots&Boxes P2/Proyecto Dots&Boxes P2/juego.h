@@ -23,6 +23,7 @@
 #include "ansi_term.h"
 #include "jugada.h"
 #include "tablaPrincipal.h"
+#include "excepcion.h"
 
 class juego {
 public:

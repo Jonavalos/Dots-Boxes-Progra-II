@@ -13,12 +13,14 @@
 
 class excepcion: public exception
 {
+public:
 	const char* what() const = 0;
 
 };
 
 class excepcionOcupado : public excepcion {
 
+public:
 	const char* what() const {
 		return "Error: casilla ocupada! ";
 	}
@@ -27,6 +29,7 @@ class excepcionOcupado : public excepcion {
 
 class excepcionFueraLimites : public excepcion {
 
+public:
 	const char* what() const {
 		return "Error: casilla fuera de limites! ";
 	}
@@ -35,6 +38,7 @@ class excepcionFueraLimites : public excepcion {
 
 class excepcionInvalidoParaLinea : public excepcion {
 
+public:
 	const char* what() const {
 		return "Error: casilla invalida para linea! ";
 	}
