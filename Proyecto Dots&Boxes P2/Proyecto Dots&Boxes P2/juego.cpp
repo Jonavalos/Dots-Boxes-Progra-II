@@ -94,7 +94,7 @@ void juego::jugVsJugIrregular(vecTablas* vec, tablaPrincipal* princi) {
 }
 
 void juego::jugadorVsJugador(vecTablas* vec) {
-	int op, x, y;
+	int op, x = -1, y = -1;
 	jugador* jugador1 = new jugador('A');
 	jugador* jugador2 = new jugador('B');
 
@@ -180,7 +180,7 @@ int juego::menuVsCompu() {
 }
 
 void juego::jugadorVsCompuAl(vecTablas* vec) {
-	int op, x, y;
+	int op, x = -1, y = -1;
 	jugador* jugador1 = new jugador('A');
 	jugador* jugador2 = new jugador('B');
 	jugadorStrat* strat = new jugadorStrat();
@@ -237,7 +237,7 @@ void juego::jugadorVsCompuAl(vecTablas* vec) {
 }
 
 void juego::jugadorVsCompuCer(vecTablas* vec) {
-	int op, x, y;
+	int op, x = -1, y = -1;
 	jugador* jugador1 = new jugador('A');
 	jugador* jugador2 = new jugador('B');
 	jugadorStrat* strat = new jugadorStrat();
@@ -305,7 +305,7 @@ void juego::jugadorVsCompuCer(vecTablas* vec) {
 }
 
 void juego::jugadorVsCompuCen(vecTablas* vec) {
-	int op, x, y;
+	int op, x = -1, y = -1;
 	jugador* jugador1 = new jugador('A');
 	jugador* jugador2 = new jugador('B');
 	jugadorStrat* strat = new jugadorStrat();
@@ -362,7 +362,7 @@ void juego::jugadorVsCompuCen(vecTablas* vec) {
 }
 
 void juego::jugadorVsCompuPeri(vecTablas* vec) {
-	int op, x, y;
+	int op, x = -1, y = -1;
 	jugador* jugador1 = new jugador('A');
 	jugador* jugador2 = new jugador('B');
 	jugadorStrat* strat = new jugadorStrat();
@@ -420,7 +420,7 @@ void juego::jugadorVsCompuPeri(vecTablas* vec) {
 
 void juego::jugadorVsCompuIslas(vecTablas* vec)
 {
-	int op, x, y;
+	int op, x = -1, y = -1;
 	jugador* jugador1 = new jugador('A');
 	jugador* jugador2 = new jugador('B');
 	jugadorStrat* strat = new jugadorStrat();

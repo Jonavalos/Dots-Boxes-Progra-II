@@ -267,9 +267,9 @@ bool tablaPrincipal::setLetra(int fil, int col, char letra) {
 
 bool tablaPrincipal::isFueraLimites(int fil, int col) {
 	if (_tablaBin[fil][col] == 0) {
-		return true;
+		return false;
 	}
-	return false;
+	return true;
 }
 
 string tablaPrincipal::toString()
