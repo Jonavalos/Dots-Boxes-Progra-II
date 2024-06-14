@@ -15,14 +15,16 @@
 class controladora {
 public:
 	controladora();
-	controladora(vecTablas* vec);
+	controladora(vecTablas* vec, tablaPrincipal* principal);
 	virtual ~controladora();
 
 	int controlMenu();
 
 	void control0();
 
-	void control1();
+	int control1();
+	void control1_1();
+	void control1_2();
 	int control2();
 	void control2_1();
 	void control2_2();
@@ -32,6 +34,7 @@ public:
 
 private:
 	vecTablas* _vec;
+	tablaPrincipal* _principal;
 
 };
 

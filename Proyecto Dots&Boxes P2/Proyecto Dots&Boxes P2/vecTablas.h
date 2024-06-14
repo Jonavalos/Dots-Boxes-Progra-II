@@ -11,9 +11,8 @@
 #pragma once
 #include "tabla.h"
 #include "iteradorVecTablas.h"
-//HACER ITERADOR
 
-class vecTablas //AKA vector de tableros, AKA tablero compuesto
+class vecTablas
 {
 private:
 	tabla** vec;

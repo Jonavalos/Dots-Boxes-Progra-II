@@ -3,15 +3,20 @@
 
 controladora::controladora() {
 	_vec = new vecTablas();
+	_principal = new tablaPrincipal();
 }
 
-controladora::controladora(vecTablas* vec) {
+controladora::controladora(vecTablas* vec, tablaPrincipal* principal) {
 	_vec = vec;
+	_principal = principal;
 }
 
 controladora::~controladora() {
 	if (_vec != nullptr) {
 		delete _vec;
+	}
+	if (_principal != nullptr) {
+		delete _principal;
 	}
 }
 
@@ -20,14 +25,24 @@ int controladora::controlMenu() {
 }
 
 void controladora::control0() {
-	int op1, op2;
+	int op1, op2, op3;
 
 	do {
 		op1 = controlMenu();
 		cout << ansi_term::home();
 		cout << ansi_term::clear();
 		switch (op1) {
-		case 1: control1(); break;
+		case 1: 
+			do {
+				op3 = control1();
+
+				switch (op3) {
+				case 1: control1_1(); break;
+				case 2: control1_2(); break;
+				default: break;
+				}
+			} while (op3 != 3);
+			break;
 		case 2:
 			do {
 				op2 = control2();
@@ -47,8 +62,16 @@ void controladora::control0() {
 	} while (op1 != 3);
 }
 
-void controladora::control1() {
+int controladora::control1() {
+	return juego::menuTablero();
+}
+
+void controladora::control1_1() {
 	juego::jugadorVsJugador(_vec);
+}
+
+void controladora::control1_2() {
+	juego::jugVsJugIrregular(_vec, _principal);
 }
 
 int controladora::control2() {
@@ -72,5 +95,5 @@ void controladora::control2_4() {
 }
 
 void controladora::control2_5() {
-
+	juego::jugadorVsCompuIslas(_vec);
 }

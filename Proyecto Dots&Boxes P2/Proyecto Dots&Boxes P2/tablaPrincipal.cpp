@@ -230,23 +230,22 @@ bool tablaPrincipal::completarLetras(jugador* p) {
 
 bool tablaPrincipal::isLibre(int fil, int col) {
 	
-	if ((_tabla[fil][col] == '-') || (_tabla[fil][col] == '|') || (_tabla[fil][col] == '+')) {
+	if (fil < 0 || fil >= 20 || col < 0 || col >= 20) {
 		return false;
 	}
-	if (_tabla[fil][col] == 'A' || _tabla[fil][col] == 'B') {
+
+	char valor = _tabla[fil][col];
+
+	if (valor == '-' || valor == '|' || valor == '+') {
 		return false;
 	}
-	if (_tabla[fil][col] == 32) {
+	if (valor == 'A' || valor == 'B') {
+		return false;
+	}
+	if (valor == 32) {
 		return true;
 	}
 	return false;
-
-	/*if (_tablaBin2[fil][col] == true && _tablaBin[fil][col] != false) {
-		return true;
-	}
-	else {
-		return false;
-	}*/
 }
 
 bool tablaPrincipal::isCasillaRodeada(int i, int j) {
@@ -268,9 +267,9 @@ bool tablaPrincipal::setLetra(int fil, int col, char letra) {
 
 bool tablaPrincipal::isFueraLimites(int fil, int col) {
 	if (_tablaBin[fil][col] == 0) {
-		return false;
+		return true;
 	}
-	return true;
+	return false;
 }
 
 string tablaPrincipal::toString()
@@ -286,12 +285,7 @@ string tablaPrincipal::toString()
 	s << endl << endl;
 
 	for (int i = 0; i < _filas; i++) {
-		//if () {
 		s << cont << "  "; cont++;
-		//}
-		//else {
-		//	s << "   ";
-		//}
 		for (int j = 0; j < _columnas; j++) {
 			s << _tabla[i][j] << "  ";
 		}
